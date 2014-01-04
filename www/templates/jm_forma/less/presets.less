@@ -1,0 +1,1184 @@
+/**
+ * @package Helix Framework
+ * @author JoomShaper http://www.joomshaper.com
+ * @copyright Copyright (c) 20010 - 2013 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or later
+*/
+
+@import 'variables';
+@import 'mixins';
+
+//Global Styles
+
+body {
+	font-size: @baseFontSize;
+	font-family: @sansRegular;
+	line-height: 1.6em;
+	color: @textColor;
+	&.bg {
+		background:@bg_color;
+	}
+}
+
+// Button
+.btn,
+button, 
+input[type="submit"], 
+input[type="button"] {
+  color: @white;
+  border-bottom: 3px solid @btnDarkenBorder;
+  background: @btnBackground;
+  // Hover state
+  &:hover,
+  &:focus{
+    color: @white;
+    background: @btnBackgroundHover;
+  }
+
+  // Focus state for keyboard and accessibility
+  &:focus {
+    .tab-focus();
+  }
+
+  // Active state
+  &.active,
+  &:active {
+    .box-shadow(none);
+    background: @btnBackgroundHover;
+  }
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    background: darken(@white, 10%);
+  }
+
+  // Button default
+  &.btn-default{
+    color: @white;
+  }
+  // Button Link
+  &.btn-link{
+  	color: @white !important;
+  	background: @linkColor;
+  	border-bottom-color: @btnDarkenBorder;
+  	&:hover{
+  		background: @btnDarkenBorder;
+  	}
+  }
+  // Button Trans
+  &.btn-trans{
+  }
+  // Button White
+  &.btn-white{
+    border-color: @white !important;
+  }
+  // Button Readmore
+  &.btn-readmore{
+  }
+
+  // Button Comment
+  &.btn-comment{
+  }
+  // Button Primary
+  &.btn-primary {
+		//.buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+		border: 2px solid @mainColor;
+		color: @mainColor;
+		background: none;
+		&:hover{
+		background: fade(@mainColor,20%); 
+		}
+
+		&.link {
+			border: 2px solid @linkColor;
+			color: @linkColor;
+			background: none;
+			&:hover{
+				background: fade(@linkColor,30%); 
+			}
+		}
+	}
+
+}
+// Tooltips
+.tooltip{
+	.tooltip-inner{
+		background-color: @linkColor;
+	}
+	&.left{
+		.tooltip-arrow{
+			border-left-color:@linkColor;
+		}
+	}
+	&.right{
+		.tooltip-arrow{
+			border-right-color:@linkColor;
+		}
+	}
+	&.top{
+		.tooltip-arrow{
+			border-top-color:@linkColor;
+		}
+	}
+	&.bottom{
+		.tooltip-arrow{
+			border-bottom-color:@linkColor;
+		}
+	}
+}
+
+//Link color
+a:not(.btn) {
+	color:@linkColor;
+	outline: none;
+	&:hover {
+	  color: @linkColorHover;
+	}
+}
+
+//Title Link color
+h1, h2, h3,h4,h5,h6{
+	a:not(.btn) {
+		color:@mainColor;
+		&:hover,
+		&:focus,
+		&:active {
+		  color: @linkColor;
+		}
+	}
+}
+
+// Sections Background Color
+
+.SectionsGrey{ background: @grey;}
+.SectionsBGLinkColor{ background: @linkColor;}
+.SectionsBG{background: url(../../images/presets/@{preset}/bg-cols.png) top center repeat-y;}
+
+.SectionsBG{
+	> div {
+		background: @bodyBackground;
+	}
+}
+
+//header
+#sp-header-wrapper {
+	background: @headerBG;
+	&.header-ontop {
+		background: fade(@headerBG, 70%);
+		position: absolute !important;
+		top: 445px;
+		z-index: 9;
+	}
+	&.fixed{
+		background: @headerBG !important;
+		box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.33);
+	}
+
+	&.header-overlay-bottom{
+		background: fade(@headerBG, 90%);
+	}
+	//#gradient > .vertical(lighten(@header_color,20%),@header_color);
+	//Logo
+	.logo{}
+	// Menu
+	#sp-menu{
+		ul {
+			&.level-0 {
+				> li {
+					//Parent List Item
+					+ li{
+						background: url(../../images/presets/@{preset}/menu/dot.png) left center no-repeat;
+					}
+					> a {
+						color:@headerLinkColor;
+						//Menu Item Description
+						.menu-desc {
+						}
+					}
+					&:hover,
+					&.active {
+						> a {
+							color: @linkColor;
+						}
+					}
+
+				}
+			}
+		}
+		//Megamenu Groups
+		.megacol{
+			div.sp-menu-group {
+				.sp-menu-group-title {
+					a {
+						color: @linkColor;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Breadcrumb */
+.breadcrumbs{
+	border-color: @borderTitleColor;
+	a{
+		color: @linkColor;
+		&:hover,
+		&:active,
+		&:focus{
+			color: @linkColorHover;
+		}
+	}
+}
+
+
+#sp-feature-wrapper {
+	//#gradient > .vertical(@link_color,darken(@link_color,20%));
+	
+	//Link
+	a:not(.btn){
+		color:@linkColor;
+		 
+		&:hover{
+		   color:@linkColorHover;
+		}
+	}
+	
+}
+/* FP Message Style */
+#sp-fp-message-wrapper{
+}
+/* FP Latest Works */
+#sp-fp-latest-work-wrapper{
+}
+/* FP Latest News
+===============================*/
+#sp-fp-latest-news-wrapper{
+
+}
+/* FP Clients 
+=============================*/
+#sp-fp-clients-wrapper{
+	background: @grayLighter;
+}
+
+/* FP Contact 
+===================================*/
+#sp-fp-contact-wrapper{
+}
+
+//  FP Icon
+#sp-fp-icon-wrapper{
+	.module{
+		a{
+			color: @headerLinkColor;
+			&:hover{
+				color: @linkColor;
+			}
+		}
+	}
+}
+
+/* FP Team*/
+#sp-fp-team-wrapper{
+	&.corporate{
+		.jmnewspro.testinomial .testinomialUsersType{
+			color: @linkColorHover;
+		}
+	}
+}
+/* FP Testinomial
+================================*/
+#sp-fp-testinomial-wrapper{
+	#fp-testinomial{
+		background: fade(@headerLinkColor,95%);
+		.module{
+		}
+	}
+}
+
+/* FP Tweets 
+========================*/
+#fp-tweets{
+	background:fade(@linkColor,91%);
+}
+
+/* Bottom 
+==========================*/
+#sp-bottom-wrapper {
+	background:@bottomBG;
+	//Link
+	/*a:not(.btn){
+		color:@linkColor;
+		&:hover{
+		   color:@linkColorHover;
+		}
+	} */
+}
+/* Footer
+===========================*/
+#sp-footer-wrapper {
+	background: @footerBG;
+}
+
+/* Module
+===============================================*/
+.module,
+.moduletable {
+	h3.header{
+		color: @titleColor;
+		span.title-border{
+			background: @titleColor;
+		}
+	}
+	&.title-on-bottom{
+		.CustomContent {
+			&.hasBG{
+				background: fade(@black, 80%)
+			}
+		}
+	}
+	/* Class Suffix module style
+	=========================================================*/
+	&.box-preset{
+		background: @linkColor;
+		border-color:@linkColor;
+	}
+	
+	/* 3rd Modules style 
+	=========================================================*/
+	// Icon top
+	&.jm-xhtml-icontop{
+      [class^="icon-"],
+      [class^="fa-"],
+      [class*="icon-"],
+      [class*="fa-"]  {
+			background: @mainColor;
+			&:hover,
+			&:active,
+			&:focus{
+				&:after{
+				background: @linkColor;
+				}
+			}
+		}
+		&:hover,
+		&:active,
+		&:focus{
+			[class^="icon-"],
+			[class^="fa-"],
+			[class*="icon-"],
+			[class*="fa-"] {
+				background: @mainColor;
+				&:after{
+					background: @linkColor;
+				}
+			}
+		}
+    }
+
+    /* JM NewsPro Module
+	================================ */
+	.jmnewspro{
+		/* Default */
+		&.default{
+			.slide-item-title{
+				color: @linkColor;
+				a{
+					color: @linkColor;
+					font-size: 30px;
+					font-family: 'open_sanslight';
+					font-weight: normal;
+					text-transform: capitalize;
+					&:hover,
+					&:active,
+					&:focus{
+						color: @linkColorHover;
+					}
+				}
+			}
+			span.slide-item-readmore {
+				color: @linkColorHover;
+				a{
+					color: @linkColorHover;
+					font-size: 13px;
+					text-transform: capitalize;
+					font-family: @sansBold;
+					&:hover,
+					&:active,
+					&:focus{
+						color: @linkColor;
+					}
+				}
+			}
+		}
+		/* Layour news1*/
+		&.consilium-news1{
+			.read-more{
+				color: @headerLinkColor;
+				&:hover{
+					color: @linkColor;
+				}
+			}
+		}
+		/* Layout News 2*/
+		&.consilium-news2{
+			.slide-inner{
+				.read-more{
+					color: @headerLinkColor;
+					&:hover{
+						color: @linkColor;
+					}
+				}
+			}
+		}
+		/* The Team Layout */
+		&.theTeam{
+			.theTeamUsersAvatarWrap{
+				.theTeamUserAvatarBorder{
+					&:hover{
+							.circle-border{
+								border-color: @linkColor;
+							}
+						} 
+				}
+			}
+			.theTeamUsersType{
+				color: @headerLinkColor;
+			}
+			.theTeamUserAdditionalInfoWrap{
+				a{
+					&:hover{
+						color: @iconColorHover;
+						&:before{
+							color: @iconColorHover;
+						}
+					}
+				}
+			}
+		}
+		/* Portfolio layout */
+		&.portfolio {
+			a.slide-item-readmore,
+			a.slide-item-zoom{
+				color: @linkColor;
+				border-color: @linkColor;
+				&:hover{
+					color:@white;
+					border-color: @white;
+				}
+			}
+		}
+		/* Portfolio Masony */
+		&.layout10{
+			.slide-item-readmore,
+			.slide-item-zoom{
+				i{
+				   color: #fff;
+				   background:@linkColor;
+				}
+				&:hover{
+					i{
+						background: @white;
+			  			color: @linkColor;
+					}
+				}
+			}
+		}
+		/* Latest News Block */
+		&.LatestNewsBlock{
+			.item-info {
+				.created-date,
+			    .modified-date{
+				    background:@linkColor;
+				    .date{
+				    	color: #fff;
+				    }
+				    .month{
+				    	color: darken(@linkColor, 15%);
+				    }
+				}
+			}
+			.item-icon{
+			  background:@mainColor;
+			}
+			.entry-title{
+				color: @mainColor;
+			}
+			.nav-buttons{
+				span{
+					.transition(all 0.3s linear 0s);
+					&:hover,
+					&:focus,
+					&:active{
+						background: @linkColor;
+						.transition(all 0.3s linear 0s);
+						i{
+							color: lighten(@mainColor, 100%);
+						}
+					}
+				}
+			}
+		}
+		// Latest Work layout
+		&.latestwork {
+			.slide-item-readmore,
+			.slide-item-zoom {
+				border-color: @linkColor;
+				color: @linkColor;
+				&:hover{
+					border-color: @white;
+					color: @white;
+				}
+			}
+		}
+		&.overlay{
+			.slide-item{
+				.slide-item-desc-warp .padding {
+					background: fade(@mainColor,70%);
+				}
+			}
+		}
+		.nav-buttons > span{
+			.transition(all 0.3s linear 0s);
+			&:hover,
+			&:focus,
+			&:active{
+				.transition(all 0.3s linear 0s);
+				background: @linkColor;
+				i{
+					color: lighten(@mainColor, 100%);
+				}
+			}
+		}
+	}
+	#filters li.current a, #filters li a:hover{
+		background: @linkColor;
+	}
+	/* End JM NewsPro Module
+	================================ */
+	/* JM Skills 
+	===========================*/
+	.JMSkills{
+		.JMSkillsTitleWrap .JMSkillsTitle{
+			color:@mainColor;
+		}
+
+		.JMSkillsProgressBarWrap .JMSkillsProgressBar{
+		}
+		.JMSkillsProgressBarWrap .JMSkillsProgressPercent{
+			background:@linkColor;
+		}
+	}
+	
+	/* JM Tweets
+	=====================================*/
+	.jmtwitterroll{
+		[class*="fa-"],
+		[class^="fa-"]{
+			color: @linkColor;
+		}
+		.twitterSearchesNUser{
+			a{
+				color: @mainColor;
+				&:hover{
+					color: @linkColor;
+				}
+			}
+		}
+		.JMTwitterRollNav {
+			a{
+				&:hover,
+				&:focus,
+				&:active{
+					background: @mainColor;
+					color: lighten(@mainColor, 100%);
+					i{
+						color: lighten(@mainColor, 100%);
+					}
+				}
+			}
+		}
+	}
+	.rev_slider_wrapper{
+		.rev_slider{
+			.tp-caption{
+				&.big_white{
+					color:@linkColor;
+					span{
+						color: @white;
+						border-bottom: @borderW1 @borderColor;
+					}
+				}
+			}
+		}
+		.tparrows{
+			&.tp-leftarrow {
+				background: @white url(../../images/presets/@{preset}/leftarrow.png) center center no-repeat;
+			}
+			&.tp-rightarrow {
+				background: @white url(../../images/presets/@{preset}/rightarrow.png) center center no-repeat;
+			}
+		}
+	}
+}
+
+/* Categories Blog 
+=======================================*/
+#CategoriesList{
+	#SubCategoriesList{
+		.subCategoryImage{
+			.subCategoryTitle{
+				background: fade(@white,60%);
+				color: @mainColor;
+			}
+		}
+	}
+}
+
+/* Joomla! Content 
+==========================*/
+.page-title,
+.page-heading, 
+.menu-page-heading,
+.componentheading {
+	border-color: @borderTitleColor;
+}
+article{
+	.entry-title{
+		color: @mainColor;
+		&:hover{
+			color: @linkColor;
+		}
+		a{
+			color: @mainColor;
+			&:hover{
+				color: @linkColor;
+			}
+		}
+	}
+	.entry-meta{
+		&.muted{
+			color: @infoColor;
+		}
+	}
+}
+
+.page-header,
+.page-heading{
+	color: @titleColor;
+}
+
+.info-title{
+	color: @mainColor;
+	font-weight: 300;
+}
+
+.list-striped li:hover, 
+.list-striped dd:hover, 
+.row-striped .row:hover, 
+.row-striped .row-fluid:hover {
+    background:@linkColor;
+    .label-info, .badge-info {
+		background: fade(@linkColor,20%);
+		
+	}
+}
+
+
+/* Typography 
+================================*/
+
+.style-list {
+	&.checked{
+		li{
+			&:before{
+				color: @linkColor;
+			}
+		}
+	}
+	&.check-sign{
+		li{
+			&:before{
+				color: @linkColor;
+			}
+		}
+	}
+	&.unstyled{
+		ul {
+	        li, .unstyled{
+	            border-color:@borderColor;
+	        }
+	     &[class*="level"] > li {
+	        	a{
+		        	border-color: @borderColor;
+ 	        	}
+	     	}
+	    }
+	}
+	li{
+		a{
+			color: @listLinkColor;
+			&:hover,
+			&:focus,
+			&:active{
+				color: @linkColor;
+			}
+		}
+	}
+}
+/* Tags Style
+=============================================================*/
+.style-tags{
+	a{
+		background:#eee;
+	    color: #555;
+	    &:hover,
+		&:focus,
+		&:active{
+			color: #fff;
+			background: @linkColor;
+			.transition(all 300ms linear 0s);
+			&:before{
+		    	border-color: rgba(255, 255, 255, 0) @linkColor rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+		    	.transition(all 300ms linear 0s);
+			}
+			&:after{
+				.transition(all 300ms linear 0s);
+			}
+		}
+		&.right{
+		    &:hover,
+			&:focus,
+			&:active{
+				&:before{
+			    	border-color: rgba(255, 255, 255, 0)   rgba(255, 255, 255, 0)  rgba(255, 255, 255, 0)  @linkColor;
+				}
+			}
+		}
+	}
+}
+
+/* accordion 
+===============================*/
+
+.toggle {
+  h3 {
+    a {
+      background: #f2f2f2;
+      color:@linkColor;
+      &:hover{
+      }
+      i {
+        color:@linkColor;
+      }
+    }
+  }
+  &.open h3 a {
+    color: #FFFFFF;
+    background: @linkColor;
+    i {
+      color: #FFFFFF;
+    }
+  }
+
+  > div {
+    background-color: #FFFFFF;
+    .box-shadow(0 1px 2px fade(@black,20%));
+  }
+}
+
+/* Tabs 
+================================*/
+.nav{
+	&#tab1{
+		border-bottom: 1px solid @linkColor;
+		a{
+			&:hover{
+				background: @linkColor;
+				color: #fff;
+				border-bottom: 1px solid @linkColor;
+				outline: none;
+			}
+		}
+		> .active{
+			> a{
+				border-color:@linkColor;
+				border-bottom-color: #fff;
+				outline: none;
+				&:hover,
+				&:focus,
+				&:active{
+					border-color:@linkColor;
+					border-bottom-color: #fff;
+					outline: none;
+				}
+			}
+		}
+	}
+
+	&#tab2{
+		a{
+			&:hover{
+				background: @linkColor;
+				color: #fff;
+				outline: none;
+			}
+		}
+		.active{
+			> a{
+				background: @linkColor;
+				color: #fff;
+				outline: none;
+			}
+		}
+	}
+	&#tab3{
+		border: 0;
+		li{
+			padding: 0 20px;
+			+li { 
+				border-left:@borderW1 #dedede;
+			}
+			&:first-child{
+				padding-left: 0;
+			}
+		}
+		a{
+			border:0;
+			border-bottom: @borderW3 #eee;
+			padding: 10px 0;
+			margin: 0 0 10px 0;
+			line-height: 1;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: @mainColor;
+			
+			&:hover{
+				background:none;
+				color: @mainColor;
+				border-bottom-color: @linkColor;
+				outline: none;
+			}
+		}
+		> .active{
+			> a{
+				border-bottom-color:@linkColor;
+				outline: none;
+				&:hover,
+				&:focus,
+				&:active{
+					border-bottom-color:@linkColor;
+					outline: none;
+				}
+			}
+		}
+	}
+}
+
+/* Testinomial Style
+==========================*/
+.testimonial{
+	.testimonial-content{
+	}
+	.arrow{
+	}
+	.AuthorName{
+		color: @linkColor;
+	}
+}
+
+/* Carousel 
+=================================*/
+.carousel{
+	.carousel-control{
+		color: #fff;
+		background: @linkColor;
+		&:hover{
+			color: #fff;
+			background: @linkColorHover;
+		}
+	}
+}
+
+/* Gallery 
+==================================*/
+.gallery-filters{
+	a{
+		&.active{
+			background: @linkColor;
+			&:hover{
+				background:@linkColor;
+			}
+		}
+	}
+}
+
+
+/* Error page */
+ h1.page-error, .jm-color{
+  color:@linkColor;
+}
+
+
+//HTML Tags
+
+form{
+	input{
+		&[type='text'],
+		&[type="password"],
+		&[type="datetime"],
+		&[type="datetime-local"],
+		&[type="date"],
+		&[type="month"],
+		&[type="time"],
+		&[type="week"],
+		&[type="number"],
+		&[type="email"],
+		&[type="url"],
+		&[type="search"],
+		&[type="tel"],
+		&[type="color"]{
+			color: @mainColor;
+		}
+
+		&:hover,
+		&:active,
+		&:focus{
+			border-color: @inputBorderHover;
+		}
+	}
+	textarea{
+		color: @mainColor;
+		&:hover,
+		&:active,
+		&:focus{
+			border-color: @inputBorderHover;
+		}
+	}
+}
+
+
+/* ============================ *
+ *       3rd Extensions         *
+ *============================= */
+
+ /* K2 Component
+=============================== */
+ #k2Container{
+    div.itemListCategoriesBlock {
+        .itemListCategory{
+            border-color: @borderTitleColor;
+        }
+        .itemListSubCategories{
+            .subCategoryContainer{
+                .subCategory-inner{
+                    .subCategoryImageWrap{
+                        border-color: @borderTitleColor;
+                        .CatTitle{
+                        	color: @mainColor;
+                        	a{
+                        		color: @mainColor;
+                        		&:hover,
+                        		&:focus,
+                        		&:active{
+                        			color:darken(@linkColor, 10%);
+                        		}
+                        	}
+                        }
+                    }
+                    .subCategoryDescWrap{
+                    	.subCategoryCountItem{
+                    		color: @infoColor;
+                    		font-style: italic;
+                    	}
+                    }
+                }
+            }
+        }
+    }
+    // Item View Layour
+    &.itemView{
+    	.itemComments{
+    		.itemCommentsCounter{
+    			border-color: @borderCommentItemColor;
+    		}
+    		.JMitemCommentsList{
+    			li{
+    				border-color: @borderCommentItemColor;
+
+    				.commentAuthorName{
+    					margin: 0;
+    				}
+    			}
+    		}
+    	}
+    	.itemFooter{
+    		border-color: @borderColor;
+    	}
+    	.itemAuthorBlock{
+            .itemAuthorBlock-Info{
+                border-color: @borderColor;
+            }
+        }
+    	&.Portfolio{
+    		.itemContentBlock{
+    			.module{
+    				h3.header{
+    					border-color: @borderColor;
+    				}
+    			}
+    			h3.entry-title{
+    				border-bottom:@borderW1 @borderColor;
+    				span{
+    					border-bottom: @borderW1 @linkColor;
+    				}
+    				&:hover{
+    					color: @linkColor;
+    				}
+    			}
+    		}
+    		.itemAuthorRelated{
+    			h3.header{
+    				border-color: @borderColor;
+    			}
+                #jm-k2-related{
+                    .k2-related-item-title{
+                        background: fadeout(@mainColor, 30%);
+                    }
+                }
+                .itemAuthorRelatedBtn{
+                    > span {
+                    	background: @iconColor;
+                        a{
+                           color: @mainColor;
+                           outline: none;
+                           &:hover,
+                           &:active,
+                           &:focus{
+                           		color: @linkColor;
+                           }
+                        }
+                    }
+                }
+            }
+    	}
+    }
+    &.userView{
+    	.itemAuthorBlock{
+            border-color:@borderColor;
+        }
+    }
+}
+// K2 Module style
+
+// K2 Comment
+.k2LatestCommentsBlock{
+    li{
+        .lcUsername{
+        	color: @mainColor;
+        }
+        .lcCommentDate{ 
+        }
+        .lcItemTitle,
+        .lcItemCategory{
+            a{
+            	color: @linkColor;
+            }
+        }
+    }
+}
+
+// K2 Users
+.k2UsersBlock{
+    .k2UsersNameWrap{
+        border-bottom: @borderW1 @borderColor;
+        .header{
+        }
+        .k2UsersType{
+        }
+    }
+    .ubUserDescription{
+        border-bottom: @borderW1 @borderColor;
+    }
+    .ubUserAdditionalInfoWrap {
+        .ubUserAdditionalInfo {
+        }
+    }
+    .k2UsersSocialLinks{
+    }
+}
+
+ /* Kunena
+ =================================== */
+// Kunena
+#Kunena a,
+#Kunena #ktab ul.menu li:hover a,
+#Kunena #ktab ul.menu li.active a{
+  color: @mainColor;
+}
+#Kunena .kblock div.kheader,
+#Kunena .button,
+#Kunena .kbutton{
+  background: @mainColor;
+}
+
+#Kunena .button,
+#Kunena .kbutton{
+  color: lighten(@mainColor, 100%) !important;
+}
+
+/* JM Vide0 Gallery 
+=============================*/
+#jm-videogalleries {
+	.jm-inverse{
+		.transition(all 0.3s linear 0s);
+		&:focus,
+		&:hover,
+		&:active,
+		&.current{
+			outline: none;
+			background: @linkColor;
+			color: #fff;
+			.transition(all 0.3s linear 0s);
+		}
+	}
+	.jmvideogalleries_videos_title{
+		background: fade(@linkColor, 80%);
+		color: #fff;
+		.padding{
+			background: fade(@linkColor, 80%);
+			color: #fff;
+			.jmvideogalleries_title{
+				color: #fff;
+				.icon-play{
+					color: #fff;
+					border-color: #fff;
+				}
+			}
+		}
+	}
+}
+
+
+// RTL Version
+.rtl{
+	//header
+	#sp-header-wrapper {
+		// Menu
+		#sp-menu{
+			ul {
+				&.level-0 {
+					> li {
+						//Parent List Item
+						+ li{
+							background: url(../../images/presets/@{preset}/menu/dot.png) right center no-repeat;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

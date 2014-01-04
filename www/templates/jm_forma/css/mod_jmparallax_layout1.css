@@ -1,0 +1,78 @@
+.jmparallax_wrap .carousel-inner {
+    overflow:inherit;
+}
+
+.JMParallaxItemWrap {
+    font-size: 32px;
+    text-transform: none;
+    line-height: normal;
+    font-family: 'open_sanslight';
+}
+.JMParallaxItemWrap .mod-header-text{
+    font-size: 14px;
+}
+/* Navigations */
+.JMParallaxWrap .bx-controls.bx-has-pager{
+    position: relative;
+    text-align: center;
+}
+.JMParallaxWrap .bx-controls.bx-has-pager .bx-pager-item{
+	display: inline-block;
+    float: none;
+	-moz-box-sizing: content-box;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    margin-left: 0;
+    padding: 2px;
+    position: relative;
+    transition: all 0.5s linear 0s;
+    width: 20px;
+	margin-left: 5px;
+	margin-top: 30px;
+}
+.bx-has-pager .bx-pager-item a{
+	border-radius: 50%;
+    display: block;
+    height: 100%;
+    transition: all 0.5s linear 0s;
+    width: 100%;
+	cursor: pointer;
+	text-indent: -99999px;
+}
+.bx-has-pager .bx-pager-item a.active{
+	background-color: rgb(255, 255, 255);
+}
+
+.bx-has-pager .bx-pager-item a.active,
+.bx-has-pager .bx-pager-item a:hover,
+.bx-has-pager .bx-pager-item a:active,
+.bx-has-pager .bx-pager-item a:focus{
+    outline: none;
+}
+
+/* Style for Module loaded in JM Parallax
+==========================================*/
+
+/* Module JM News Pro
+----------------------*/
+.JMParallaxItemWrap .latestwork .nav-buttons.center-center > span.next{
+    right: 0;
+    top: 28%;
+    margin: 0;
+}
+.JMParallaxItemWrap .latestwork .nav-buttons.center-center > span.prev{
+    left: 0;
+    top: 28%;
+    margin: 0;
+}
+
+/* Module JM Quick Contact
+--------------------------*/
+.JMParallaxItemWrap form input[type="text"],
+.JMParallaxItemWrap form textarea{
+    background: rgba(246,246,246,0.7);
+    border: 0;
+}

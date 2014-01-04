@@ -1,0 +1,1106 @@
+
+/*----------------------------------------------------------------------
+# Package - JM Template
+# ----------------------------------------------------------------------
+# Author - JoomlaMan http://www.joomlaman.com
+# Copyright Copyright under commercial licence (C) 2012 - 2013 JoomlaMan
+# License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+-----------------------------------------------------------------------*/
+
+/* Blog categories layout */ 
+#k2Container{
+    .k2FeedIcon{
+        i{
+            width: 30px;
+            height: 30px;
+            font-size: 30px;
+        }
+    }
+    .modal{
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        margin: auto;
+        width: auto;
+        border:0;
+        z-index: 1;
+        .border-radius(0);
+        .box-shadow(none);
+    }
+    div.itemListCategoriesBlock {
+        .itemListCategory{
+            padding: 0 0 @mainPadding;
+            margin: 0 0 @mainMarginL;
+            border-bottom: @borderW1;
+
+            .catImage{
+                text-align: center;
+            }
+            .catInfo{
+            }
+        }
+        .itemListSubCategories{
+            .subCategoryContainer{
+                .subCategory-inner{
+                    .subCategoryImageWrap{
+                        position: relative;
+                        .CatTitle{
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            margin-bottom:0;
+                            padding: @mainPaddingS 0;
+                            background: fadeout(@white, 10%);
+                            text-transform: uppercase;
+                            font-family: @sansSemiBold;
+                            font-size: @titleSizeSM;
+                            line-height: 1;
+                            a{
+                                line-height: 1;
+                            }
+                        }
+                        a.subCategoryImage{
+                            img{
+                                width: 100%;
+                            }
+                            &:hover{
+                            }
+                        }
+                    }
+                    .subCategoryDescWrap{
+                        background: @boxBG;
+                        padding:5px @mainPaddingS 0 @mainPaddingS;
+                        margin-bottom: @mainMargin;
+
+                        .show_more{ 
+                            margin-bottom: -@mainMargin;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*list Item Layout*/
+    div.itemList {
+        /* Leading Layout */
+        .cols1 + .cols1{
+            &.itemContainer {
+                margin-top: @mainMarginL;
+            }
+        }
+        #itemListLeading {
+            .itemContainer {
+            }
+            .catItemImageBlock{
+                margin:0 0 @mainMargin;
+                .catItemImage{
+                    img{}
+                }
+            }
+            .catItemInfo{ 
+                * {
+                    font-size:@bodySmallFont;
+                }
+                .catItemTagsBlock{
+                    span{
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+        /* Primary Layout*/
+        #itemListPrimary{
+            .itemContainer{    
+            }
+            .catItemInfo-Image{ 
+                position: relative;
+                .catItemImageBlock{
+                margin:0 0 @mainMargin;
+                .catItemImage{
+                    img{}
+                    }
+                }
+            }
+            .catItemInfo-Text{
+                .catItemBody{ padding: 0;}
+                .catItemHeader {
+                    span{
+                        display: inline-block;
+                    }
+                    .catItemTitle,
+                    h2{ text-transform: uppercase; font-size: 18px; padding: 16px 0 4px; margin:0;}
+                }
+            }
+        }
+        /* Secondary Layout*/
+        #itemListSecondary{
+            .itemContainer{   
+            }
+            .catItemInfo-Image{ 
+                position: relative;
+                .catItemImageBlock{
+                    .catItemImage{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .catItemInfo-Text{
+                &.Full{ padding-left: 0;}
+                .catItemBody{ padding: 0;}
+                .catItemHeader {
+                    span{
+                        display: inline-block;
+                    }
+                    .catItemTitle,
+                    h2{
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+        .catItemView{ padding: 0;}
+
+    }
+
+    /* Item Details Layout*/
+    &.itemView {
+        padding: 0;
+        margin:0;
+        border: 0;
+        .itemHeader{
+            .itemTitle,
+            h2.itemTitle{
+                text-transform: capitalize;
+                font-size: @blogTitle;
+                line-height: 1;
+                padding: @mainPadding 0 @mainPaddingS 0;
+                margin:0;
+
+                .itemCommentsLink{
+                    span{
+                        font-family: 'open_sansregular'
+                    }
+                }
+            }
+            .itemToolbar{ 
+                padding-top: 10px;
+                text-align: right;
+                font-size: 18px;
+                a{
+                    font-size: 18px;
+                    display: inline-block;
+                    margin-left: 10px;
+
+                    [class*="icon-"],
+                    [class^="icon-"],
+                    [class*="fa-"],
+                    [class^="fa-"]{
+                        font-size: 18px;
+                        display: inline-block;
+                        overflow: hidden;
+                    }
+                }
+            }
+            .item-info{
+                margin: 0 0  @mainMargin/2 0;
+                clear: both;
+                display: block;
+                overflow: hidden;
+                .itemAuthor{
+                    display: inline-block;
+                }
+            }
+            .itemNavigation{
+                margin-left: 10px;
+                font-size: 14px;
+                a{
+                    border: 1px solid lighten(@main_color, 10%);
+                    padding:6px 6px;
+                    + a{ margin-left: 10px;}
+                }
+            }
+        }
+
+        .itemImageBlock{
+            border: 0;
+            padding: 0;
+			margin-bottom:15px;
+            .itemImage{
+                .modal{
+                    position: inherit;
+                    border-radius: 0;
+                    box-shadow: none;
+                    border: 0;
+                    margin: 0;
+                    width: auto;
+                    img{
+                        border:0;
+                        padding: 0;
+                        width: 100% !important;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+        .itemIntroText{
+            font-weight: normal;
+            color: @text_color;
+        }
+
+        .itemFooter{
+            border-top: @borderW1;
+            border-bottom: @borderW1;
+            margin: @mainMarginL 0 0 0;
+            padding: @mainPaddingS 0 0 0;
+            > div {
+                margin: 0 0 @mainMarginS 0;
+            }
+            .itemUpdate{
+                &.row-fluid{
+                    min-height: 0;
+                    [class*='span'],
+                    [class^='span']{
+                        min-height: 0;
+                    }
+                }
+            }
+            .itemCategory {
+            }
+            
+            .itemRatingBlock {
+                .itemRatingList{
+                    position:relative;
+                    width:125px;
+                    height:25px;
+                    overflow:hidden;
+                    list-style:none;
+                    margin:-4px 0 0 0;
+                    padding:0;
+                    background-position:left top;
+                    background:transparent url(../images/presets/@{preset}/icon-vote.png) repeat-x;
+                    a:hover,
+                    .itemCurrentRating {
+                        background:transparent url(../images/presets/@{preset}/icon-vote.png) left -1000px repeat-x;
+                    }
+                    li {
+                        display:inline;
+                        background:none;
+                        padding:0;
+                    }
+                    a,
+                    .itemCurrentRating {
+                        position:absolute;top:0;
+                        text-indent:-1000px; 
+                        font-size:0;
+                        height:25px;
+                        line-height:25px;
+                        outline:none;
+                        overflow:hidden;
+                        border:none;
+                        cursor:pointer;
+                    }
+                    a{
+                        &:hover {background-position:left bottom;}
+                        &.one-star {width:20%;z-index:6;}
+                        &.two-stars {width:40%;z-index:5;}
+                        &.three-stars {width:60%;z-index:4;}
+                        &.four-stars {width:80%;z-index:3;}
+                        &.five-stars {width:100%;z-index:2;}
+                    }
+                .itemCurrentRating {z-index:1;background-position:0 center;margin:0;padding:0;}
+                    span.siteRoot {display:none;}
+                }
+            } 
+
+            .itemTagsBlock {
+                .itemTagsBlock-Inner{
+                    .item-tags-title{
+                    }
+                }
+            }
+        }
+
+        .itemAuthorBlock{
+            .itemAuthorBlock-Info{
+                padding:0 0  @mainPaddingL;
+                margin: @mainMarginL 0;
+                border-bottom: @borderW1;
+            }
+                .itemAuthorAvatarWrap{
+                    text-align: center;
+                    .jm-itemAuthorAvatar{
+                        background: none;
+                        border: 0;
+                        padding: 0;
+                        margin: 0;
+                        .border-radius(50%);
+                        max-width: 150px;
+                    }
+                }
+                
+                .itemAuthorDetails{
+                    padding:0;
+                    .itemAuthorName{ 
+                        font-size: 15px;
+                        text-transform: uppercase;
+                        padding: 0;
+                        margin:@mainMargin 0 @mainMargin/3;
+                        line-height: 1;
+                    }
+                    .itemAuthorUrl{
+                        padding: 0;
+                        margin: 0;
+                        border: 0;
+                    }
+                    .itemAuthorEmail{
+                        padding: 0 0 0 10px;
+                        margin: 0 0 0 10px;
+                        border-left: @mainBorder;
+                    }
+                }
+                .itemAuthorRelated{
+                    margin: @mainMargin 0 0 0;
+                    padding: @mainPadding 0 0 0;
+                    border-top: @mainBorder;
+                }
+        }
+        div.itemNavigation{
+            background: none;
+            border: 0;
+            margin: 0 0 @mainMargin 0;
+            font-size: 14px;
+        }
+        .itemMediaWrap{
+            padding: @mainPadding 0 0 0;
+            margin: @mainMargin 0 0 0 ;
+            border-top: @mainBorder;
+            .itemVideoBlock{
+                background: none;
+                
+            }
+            .itemImageGallery{
+                #jm-me-slide{ display: none;}
+                .sigProContainer{
+                    li{
+                        width: 50%;
+                        margin: 0 0 @mainMargin 0;
+                        background: none !important;
+                        &.sigProThumb{
+                            .sigProLinkOuterWrapper{
+                                padding: 0;
+                                background: none;
+                                margin: 0 10px;
+                                float: none;
+                                .sigProLinkWrapper{
+                                    padding: 0;
+                                    margin: 0;
+                                    border:0;
+                                    float: none;
+                                    .sigProLink{ width: 100% !important; display: block;}
+                                    .sigProImg{
+                                        background-size: 100% 100%;
+                                        width: 100% !important;
+                                        height: 100% !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .itemComments{
+            .itemCommentsCounter{ 
+                text-transform: uppercase; 
+                font-size: @titleSizeS;
+                padding: 0 0 15px 0;
+                margin: 0 0 25px 0;
+                border-bottom: @borderW1;
+                font-family: @sansSemiBold;
+            }
+            .JMitemCommentsList {
+                li{
+                    margin: 0 0 @mainMarginL 0;
+                    padding: 0 0 @mainPaddingL 0;
+                    border-bottom: @borderW1;
+                    .user-comment-img{
+                        width: 80px;
+                        max-width: 80px;
+                        .border-radius(50%);
+                        padding: 0;
+                        height: auto;
+                    }
+                    .commentContent{ 
+                        padding-left: 105px;
+                        .commentAuthorName{
+                            font-family: @sansRegular;
+                            margin: 0;
+                            font-size: 16px;
+                        }
+                        .commentDate{
+                            font-size: 12px;
+                        }
+                        .itemCommentText{
+                            padding: @mainPaddingS 0 0 0 ;
+                        }
+                    }
+                }
+            }
+            .itemCommentsPagination{
+                padding: 0;
+                margin: 0;
+            }
+            .itemCommentsForm{
+                > h3 {
+                    font-size: @titleSizeS;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+                .itemCommentsFormNotes{
+                    margin: 0 0 @mainMarginM 0;
+                }
+                .dk21box,
+                .dk22box{ margin-bottom: @mainMargin;
+                    #commentText{ width: 600px;}
+                }
+                [class^="icon-"], 
+                [class*=" icon-"],
+                [class^="fa-"], 
+                [class*=" fa-"]{
+                    color: @main_color;
+                    padding: 5px 0;
+                    border: @mainBorder;
+                    border-right-width: 0;
+                    height: 20px;
+                    line-height: 20px;
+                    text-align: center;
+                    background: #f3f3f3;
+                    width: 40px;
+                }
+                .icon-pencil{ height: 158px;}
+                #jm-submitCommentButton{
+                    &:hover,
+                    &:focus,
+                    &:active{
+                        //background: @main_color !important;
+                        //color: lighten(@main_color, 100%) !important;
+                    }
+                }
+            }
+        }
+        .itemSocialSharing{
+            margin-top: @mainMarginL;
+            > div { 
+                float: left;
+                margin-right: 20px;
+            }
+            .itemGooglePlusOneButton{
+                > div {}
+            }
+        }
+        .itemVideoBlock{
+            background: none;
+        }
+
+        // Porfolio style
+        &.Portfolio{
+            .module{
+                h3.header{
+                    font-size: @titleSizeS;
+                    border-bottom: @borderW1;
+                    padding-bottom: @mainPaddingS;
+                }
+            }
+            h4{
+                font-size: @h4Title;
+                &.title{
+                    text-transform: uppercase;
+                    padding: 0 0 @mainPadding/2;
+                    margin:0 0 @mainMargin 0;
+                    border-bottom:1px solid lighten(@main_color, 79.9%);
+                }
+            }
+            .itemIntroText{
+                padding-top: 0;
+                font-weight: normal;
+                font-size: inherit;
+                color: @text_color;
+            }
+            .itemContentBlock {
+                h3.entry-title{ 
+                    margin: 0 0 @mainPadding 0; 
+                    padding: 0; 
+                    font-size:@h3SizeSmall;
+                    line-height: normal;
+                    span{
+                        padding-bottom: 4px;
+                        margin-bottom: -1px;
+                        display: inline-block;
+                    }
+                }
+            }
+            .itemExtraFields{
+                li{
+                    padding: 0;
+                    margin:0 ;
+                    &.typeTextfield {
+                        padding-bottom: @mainPadding;
+                    }
+                    &.typeMultipleSelect {
+                        padding-bottom: @mainPadding;
+                    }
+                    &.typeLink{
+                        margin-top: 20px;
+                    }
+                    h6{
+                        padding-bottom: 7px;
+                    }
+                }
+                h4{
+                    border: 0;
+                    margin: 0;
+                    padding: 0 0 @mainPadding/6 0;
+                    text-transform: uppercase;
+                    &.title{
+                        padding: 0 0 @mainPadding/2;
+                        margin:0 0 @mainMargin 0;
+                        border-bottom:@mainBorder;
+                    }
+                }
+            }
+            .itemAuthorRelated{
+                margin:0 0 @mainMarginM 0;
+                .itemAuthorRelatedHeader{
+                    position: relative;
+                    h3.header{
+                        font-size: 18px;
+                    }
+                    .itemAuthorRelatedBtn{
+                        position: absolute;
+                        top: 0;
+                        #jm-k2-related-next{
+                            a{
+                                font-size: 0;
+                                text-indent: 999999px;
+                                &:before{
+                                    content: "\f104";
+                                    font-size: 15px;
+                                    font-family: "FontAwesome";
+                                    padding: 5px;
+                                }
+                            }
+                        }
+                        #jm-k2-related-prev{
+                            a{
+                                font-size: 0;
+                                text-indent: 999999px;
+                                &:before{
+                                    content: "\f105";
+                                    font-size: 15px;
+                                    font-family: "FontAwesome";
+                                    padding: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                #jm-k2-related{
+                    direction: ltr;
+                    .k2RelatedItemInner{
+                        position: relative;
+                        overflow: hidden;
+                    }
+                    .k2-related-item-title{
+                        position: absolute;
+                        top: 0;
+                        opacity: 0;
+                        text-align: center;
+                        overflow: hidden;
+                        &:hover{
+                            .opacity(100);
+                        }
+                    }
+                    .k2-related-item-title a{
+                        font-size: 55px;
+                        color: #fff;
+                        display: block;
+                        font-weight: normal;
+                        &:hover,
+                        &:active,
+                        &:focus{
+                            outline: none;
+                            text-decoration: none; 
+                        }
+                    }
+                    .itemRelTitle{
+                        text-transform: uppercase;
+                        font-size: @titleSizeS;
+                        margin-top: 10px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            .itemVideoBlock{
+                margin: 0 0 @mainMargin*2 0;
+                padding:0;
+                h3.entry-title{
+                    font-size: 18px;
+                }
+                .itemVideoCaption{
+                    color: @text_color;
+                    font-weight: normal;
+                    float: none;
+                    width: 100%;
+                    font-size: 13px;
+                }
+                .itemVideoCredits{
+                    float: none;
+                    width: 100%;
+                    padding: 10px 0 0 0;
+                    color: @text_color;
+                    font-size: 13px;
+                    font-weight: normal;
+                    text-align: inherit;
+                    font-style: normal;
+                }
+            }
+            .itemImageGallery{
+                #jm-me-slide{ display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+                &.itemImageGallerySlideshow{
+                    #jm-me-slide{
+                        display: block;
+                        img{ width: 100%;}
+                    }
+                    .sigProContainer{ display: none;}
+                }
+            }
+            .itemBody{
+                .itemText,
+                .itemImageBlock,
+                .itemFullText{ margin-bottom: @mainMargin;}
+            }
+        }
+
+        .itemBackToTop{ color:@main_color;
+            a{ color: @main_color;}
+        }
+    }
+
+
+    /*User view layout*/
+    &.userView {
+        .k2FeedIcon{ }
+        .itemAuthorBlock{
+            background: none;
+            border-bottom:@borderW1;
+            padding: @mainPadding 0;
+            margin: 0 0 @mainMarginL 0;
+
+            .itemAuthorBlockImage{
+                text-align: center;
+                .jm-itemAuthorAvatar{
+                    .border-radius(50%);
+                    max-width: 150px;
+                    display: inline-block;
+                    float: none;
+                }
+            }
+            
+            .itemAuthorDetails{
+                .itemAuthorName{
+                    font-size: @h3SizeSmall;
+                    text-transform: capitalize;
+                    padding: 0;
+                    margin:@mainMargin 0;
+                    line-height: 1;
+                }
+                .itemAuthorUrl{
+                }
+                .itemAuthorEmail{
+                }
+            }
+        }
+        .userItemList{
+            .userItemView{
+                margin: 0 0 @mainMarginL  0;
+                .userImageBlock{
+                    position: relative;
+                    .userItemImageBlock{
+                        .JMuserItemImage{
+                            img{ max-width: 100%; width: 100% !important;}
+                        }
+                    }
+                }
+                .userItemInfo-Text{
+                    .userItemBody{ 
+                        .userItemTitle,
+                        h2{}
+                    }
+                }
+            }
+        }
+    }
+
+    // Tag view layout
+    &.tagView{
+        .tagItemList{
+            .tagItemView{
+                margin: 0 0 @mainMarginL 0;
+                .tagItemImageBlock{
+                    .tagItemImage{
+                        img{
+                            width: 100% !important;
+                        }
+                    }
+                }
+                .tagItemBody{
+                    .tagItemHeader{
+                        h2,
+                        h2.title,
+                        .title{
+                            padding: 0;
+                            line-height: 1;
+                            a{
+                                line-height: 1;
+                            }
+                        }
+                    }
+                    .tagItemIntroText{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    /* K2 Registration page */
+   &.k2AccountPage{
+      .gender {
+        label{
+            display: inline-block;margin: 0 10px;
+        }
+      }
+    }
+}
+
+// K2 Module style
+
+// K2 Comment
+.k2LatestCommentsBlock{
+    li{
+        border: 0 !important;
+        padding: 0 !important;
+        margin:  0 0 @mainMargin 0 !important;
+        .lcUsername{
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+        }
+        .lcCommentDate{ 
+            font-size: 12px; 
+            margin-bottom: @mainMargin/2;
+        }
+        .lcItemTitle,
+        .lcItemCategory{
+            font-size: 15px;
+            margin:@mainMargin/2 0 0 0;
+            a{
+                font-size: 13px;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.k2Avatar{
+    display: block;
+    img{
+        padding: 0;
+        margin: 0;
+        border: 0;
+        .border-radius(50%);
+    }
+}
+
+// K2 Users
+.k2UsersBlock{
+    .k2UsersAvatarWrap{ text-align: center;}
+    .k2UsersNameWrap{
+        padding-bottom: @mainPadding/2;
+        border-bottom: @borderW1 @borderColor;
+        .header{
+            font-family: 'open_sanslight';
+            padding: @mainPadding/2 0 0;
+            margin: 0;
+            font-size: 21px;
+        }
+        .k2UsersType{
+            padding: @mainPadding/2 0 0 ;
+            font-size: 12px;
+            text-transform: capitalize;
+        }
+    }
+    .ubUserDescription{
+        border-bottom: @borderW1 @borderColor;
+        padding-bottom: @mainPadding/3;
+        margin-bottom: @mainMargin/2;
+    }
+    .ubUserAdditionalInfoWrap {
+        margin-bottom: 0;
+        .ubUserAdditionalInfo {
+            span{
+                font-size: 0;
+            }
+        }
+    }
+    .k2UsersSocialLinks{
+        text-transform: capitalize;
+    }
+}
+
+/* Fix k2 sigPro popup images*/
+#lbCenter,
+#lbCaption,
+#lbNumber{ z-index: 99999999 !important;}
+#lbCaption,
+#lbNumber{ margin: 0 -10px; padding: 0 10px; position: relative; background: #fff;}
+
+
+/* RTL version */
+.rtl{
+}
+
+// Responsive version
+
+// Max Width 767
+@media(max-width:767px){
+    div.itemListCategoriesBlock {
+        .itemListCategory{
+            .catImage{
+                width: 100% !important;
+                margin: 0 0 @mainMargin 0;
+                float: none;
+            }
+            .catInfo{
+                padding-left: 0;
+            }
+        }
+    }
+    /*list Item Layout*/
+    div.itemList {
+        /* Leading Layout */
+        #itemListLeading {
+            .itemContainer {
+                .catItemInfo-Image{
+                    img{
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+        /* Primary Layout*/
+        #itemListPrimary{
+            .itemContainer{
+            }
+            .catItemInfo-Image{ 
+                margin: 0 ;
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+            .catItemInfo-Text{
+                padding-left: 0;
+            }
+        }
+        /* Secondary Layout*/
+        #itemListSecondary{
+            .itemContainer{
+            }
+            .catItemInfo-Image{ 
+                width: 100%;
+                img{ width: 100% !important;}
+            }
+            .catItemInfo-Text{
+                padding-left: 0;
+            }
+        }
+
+    }
+    /*User view layout*/
+    div.userView {
+        .userItemList{
+            .userItemView{
+                .userImageBlock{ 
+                    margin: 0;
+                    width: 100%;
+                }
+                .userItemInfo-Text{
+                    padding-left:0%;
+                }
+            }
+        }
+    }
+
+    // Tag view layout
+    .tagView{
+        .tagItemList{
+            .tagItemView{
+                .tagItemImageBlock{
+                    width:100%;
+                }
+                .tagItemBody{
+                    padding:0 ;
+                }
+            }
+        }
+    }
+
+    /* K2 Modules
+    ===================== */
+    // K2 Users
+    .k2UsersBlock{
+        [class*='span']{
+            width: @fluidGridColumnWidth;
+            margin-left: @fluidGridGutterWidth;
+            float: left;
+        }
+        .span1{ width: @fluidGridColumnWidth;}
+        .span2{ width: @fluidGridColumnWidth*3;}
+        .span3{ width: @fluidGridColumnWidth*4;}
+        .span4{ width: @fluidGridColumnWidth*5;}
+        .span5{ width: @fluidGridColumnWidth*6;}
+        .span6{ width: @fluidGridColumnWidth*7;}
+        .span7{ width: @fluidGridColumnWidth*8;}
+        .span8{ width: @fluidGridColumnWidth*9;}
+        .span9{ width: @fluidGridColumnWidth*10;}
+        .span10{ width: @fluidGridColumnWidth*11;}
+        .span11{ width: @fluidGridColumnWidth*12;}
+        .span12{ width: @fluidGridColumnWidth*13;}
+        &:first-child{ margin-left: 0;}
+        li{
+            .row-fluid {
+                &:first-child{ margin-left: 0;}
+            }
+        }
+    }
+}
+// Responsive version for K2
+// Max width 767 
+@media (max-width:767px){
+    #k2Container{
+        /*list Item Layout*/
+        div.itemList {
+            /* Leading Layout */
+            #itemListLeading {
+                .itemContainer {
+                }
+            }
+            /* Primary Layout*/
+            #itemListPrimary{
+                .itemContainer{
+                }
+            }
+            /* Secondary Layout*/
+            #itemListSecondary{
+                .itemContainer{
+                }
+            }
+
+        }
+    }
+}
+// Max width 640
+@media (max-width:640px){
+    #k2Container{
+        /* Categories List */
+        div.itemListCategoriesBlock {
+            .itemListSubCategories {
+                .subCategoryContainer{
+                    width: 100% !important;
+                }
+            }
+        }
+        /*list Item Layout*/
+        div.itemList {
+            /* Leading Layout */
+            #itemListLeading {
+                .itemContainer {
+                }
+            }
+            /* Primary Layout*/
+            #itemListPrimary{
+                .itemContainer{
+                    float: none;
+                }
+            }
+            /* Secondary Layout*/
+            #itemListSecondary{
+                .itemContainer{
+                    float: none;
+                }
+            }
+
+        }
+        /* Item View Layout*/
+        div.itemView{
+
+            // Comment Form
+            .itemComments{
+                .itemCommentsForm{
+                    .dk21box,
+                    .dk22box{ 
+                        #commentText{ width: 400px;}
+                    }
+                }
+            }
+        }
+    }
+}
+// Max width 360
+@media (max-width:360px){
+    /* K2 Registration page */
+    .k2AccountPage{
+      div{
+        &.admintable{
+          .key,
+          .paramlist_key{
+            label{
+              padding-right: 0;
+              min-width: 175px;
+              width: 220px;
+              &:after{
+                right: 0;
+                top: 0;
+                border: @mainBorder;
+                border-bottom: 0;
+              }
+            }
+            &.gender{
+                label{
+                    min-width: 0;
+                    width: auto;
+                }
+            }
+            &.message{
+                label{
+                    min-width: 0;
+                }
+                #description_parent{ max-width: 280px; float: left;}
+                .toggle-editor{ max-width: 280px; text-align: right; clear: both;}
+            }
+          }
+        }
+      }
+    }
+}

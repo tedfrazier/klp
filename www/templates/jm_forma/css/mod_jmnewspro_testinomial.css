@@ -1,0 +1,185 @@
+/* * --------------------------------------------------------------------
+  # Package - JoomlaMan JMNewsPro
+  # Version 1.0
+  # --------------------------------------------------------------------
+  # Author - JoomlaMan http://www.joomlaman.com
+  # Copyright © 2012 - 2013 JoomlaMan.com. All Rights Reserved.
+  # @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or Later
+  # Websites: http://www.JoomlaMan.com
+  ---------------------------------------------------------------------* */
+ 
+.jmnewspro.testinomial {
+    padding: 0;
+    position: relative;
+	direction: ltr;
+}
+.jmnewspro.testinomial .bx-wrapper {
+    position: relative;
+    margin: 0 auto 0;
+    padding: 20px 0 0 0;
+    *zoom: 1;
+}
+.jmnewspro.testinomial .jmnewsprohover{
+    background: rgba(0,0,0,0.8);
+    color: #e5e5e5;
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    text-align: center;
+}
+.jmnewspro.testinomial .jmnewsprohover .slide-inner{
+    padding: 12px 22px;
+}
+
+.jmnewspro.testinomial  .slide-item-image,
+.jmnewspro.testinomial  .slide-item-image a{
+    text-align: center;
+    overflow: hidden;
+    display: block;
+}
+.jmnewspro.testinomial  .slide-item-image img,
+.jmnewspro.testinomial  .slide-item-image a img{
+    max-width: 100px;
+    display: inline-block;
+    -webkit-transition: all .18s linear;
+    -moz-transition: all .18s linear;
+    -ms-transition: all .18s linear;
+    -o-transition: all .18s linear;
+    transition: all .18s linear;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.jmnewspro.testinomial  .slide-item-title{
+    margin:0;
+}
+.jmnewspro.testinomial  .testinomialUsersName h3.header {
+  font-size: 15px;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+.jmnewspro.testinomial  .testinomialUsersType{
+    font-size: 12px;
+    text-transform: capitalize;
+    padding-top: 0;
+    font-family: 'Open Sans';
+    color: #fff;
+    text-align: center;
+    padding: 5px 0 0 0;
+    font-weight: 600;
+}
+.jmnewspro.testinomial .slide-item-title a:hover{
+
+}
+.jmnewspro.testinomial .slide-item-readmore a{
+
+}
+.jmnewspro.testinomial .slide-item-readmore a:hover{
+    color: #fff;
+}
+
+
+
+.jmnewspro.testinomial  .testinomialUserDescription{
+    padding: 15px;
+    margin-bottom: 0;
+    border-radius:10px;
+    background: rgba(238,238,238,0.8);
+    position: relative;
+}
+.jmnewspro.testinomial  .ArrowWrap .arrow{
+    border: 20px solid rgba(255,255,255,0);
+    border-bottom-width: 0;
+    width: 0;
+    height: 0;
+    border-top-color:rgba(238,238,238,0.8);
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+.jmnewspro.testinomial .testinomialUserAdditionalInfoWrap{
+    padding: 0;
+}
+.jmnewspro.testinomial .testinomialUserAdditionalInfoWrap a{
+    font-size: 0;
+    text-indent: -99999px;
+    color: #dddddd;
+}
+.jmnewspro.testinomial .testinomialUserAdditionalInfoWrap a +a {
+    margin-left: 10px;
+}
+.jmnewspro.testinomial .testinomialUserAdditionalInfoWrap a:before{
+    font-size: 20px;
+    text-indent: 0;
+}
+.jmnewspro.testinomial .jmnewspro-prev,
+.jmnewspro.testinomial .jmnewspro-next{
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -99px;
+    top: 75px;
+    width: 20px;
+    opacity: 0;
+}
+.jmnewspro.testinomial .jmnewspro-prev{
+    background: url("../images/button.png") no-repeat scroll 0 -40px transparent;
+}
+.jmnewspro.testinomial .jmnewspro-next{
+    background: url("../images/button.png") no-repeat scroll 0 0 transparent;
+    right: 0;
+}
+
+
+/** Pager
+===================================*/
+.jmnewspro.testinomial .bx-pager ul{
+    list-style-type: none !important;
+    margin: 3px 0 0 !important;
+    padding: 0 !important;
+    float: left;
+}
+.jmnewspro.testinomial .bx-pager ul li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px 0 0 !important;
+}
+.jmnewspro.testinomial .bx-pager ul li a{
+    background: url('../images/interface.png') no-repeat 50% 0;
+    text-indent: -999em;
+    cursor: pointer;
+    display: block;
+    width: 8px;
+    height: 8px;
+    overflow: hidden;
+}
+.jmnewspro.testinomial .bx-pager ul li a:hover,
+.jmnewspro.testinomial .bx-pager ul li a.active {
+    background-position: 50% -8px;
+}
+.jmnewspro.testinomial .bx-wrapper .bx-controls-direction{
+    display: none;
+}
+.jmnewspro.testinomial .jmnewspro.jmnewspro.testinomial img:hover {
+    -webkit-transform: scale(1.1) rotateZ(-3deg);
+    -moz-transform: scale(1.1) rotateZ(-3deg);
+    -ms-transform: scale(1.1) rotateZ(-3deg);
+    -o-transform: scale(1.1) rotateZ(-3deg);
+    transform: scale(1.1) rotateZ(-3deg);
+}
+.jmnewspro.testinomial .slide-inner{
+    padding: 0!important;
+}
+
+.testinomial.jmnewspro:hover .jmnewspro-prev{
+    opacity: 1;
+}
+.testinomial.jmnewspro:hover .jmnewspro-next{
+    opacity: 1;
+}
