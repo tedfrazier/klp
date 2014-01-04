@@ -1,0 +1,597 @@
+/**
+ * @package Helix Framework
+ * @author JoomShaper http://www.joomshaper.com
+ * @copyright Copyright (c) 20010 - 2013 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or later
+*/
+
+a, 
+a:hover,
+a:hover:before,
+a:hover:after,
+a:focus,
+a:active {
+	text-decoration:none;
+	outline: none;
+	.transition(all 300ms linear 0ms);
+}
+
+a:not(.btn){
+	&.readmore,
+	&.read-more{
+		font-family: @sansBold;
+	}
+}
+
+.btn{
+	> a:not(.btn){
+		color: #fff;
+		&:hover{
+			color: #fff;
+		}
+	}
+}
+
+
+/* Joomla! Content Style
+=====================================*/
+.page-title,
+.page-heading, 
+.menu-page-heading,
+.componentheading {
+	text-transform: uppercase;
+	font-size: @titleSizeXM;
+	line-height: 1;
+	padding: 0 0 @mainPaddingL;
+	margin: 0 0  @mainMarginL;
+	font-family: @sansSemiBold;
+	border-bottom: @borderW1;
+	font-weight: normal;
+}
+//Page header
+.page-header{
+	padding:0;
+	margin: 0 0 @mainMarginS 0;
+	border: none;
+	h1,
+	.entry-title{
+		margin: 0;
+		padding: 0;
+	}
+}
+
+// Item Title 
+.entry-header{
+	h2{
+		margin: 0;
+		line-height: 1;
+	}
+}
+
+//Entry meta
+.entry-meta {
+	&.muted{
+		padding:0;
+		font-family: @sansSemiBold;
+		line-height: @baseLineHeight/2;
+
+		[class*='icon-'],
+		[class^='icon-'],
+		[class*='fa-'],
+		[class^='fa-']{
+			line-height: @baseLineHeight/2;
+			margin-right: 5px;
+		}
+
+		.entry-info + .entry-info{
+			&.left{
+				margin: 0 0 @mainMarginS @mainMarginM - 4;
+				padding-left: @mainPaddingM - 4;
+				border-left:@borderW1;
+			}
+			&.right{
+				margin: 0  @mainMarginM - 4 @mainMarginS 0;
+				padding-right: @mainPaddingM - 4;
+				border-right:@borderW1;
+			}
+		}
+		> * { margin-bottom: @mainMarginS;}
+	}
+	
+	ul {
+		margin:0;
+		&.actions {
+			li {
+				display:inline-block;
+				line-height: 10px;
+				+li { margin-left: 10px;}
+				&.print-icon {
+					a {
+						&::before {
+							content:"\f02f";
+						}
+					}
+				}
+				
+				&.email-icon {
+					a {
+						&::before {
+							content:"\f003";
+						}
+					}
+				}
+				
+				&.edit-icon {
+					a {
+						&::before {
+							content:"\f044";
+						}
+					}
+				}
+				a {
+					font-family:FontAwesome;
+					display:block;
+					font-size:14px;
+					margin-left:5px;
+					img {
+						display:none;
+					}	
+				}
+				
+				//Joomla 3.0
+				a{
+					span{
+						display:none;
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+// image
+.entry-content{
+	img,
+	[class*='pull-'],
+	[class^='pull-']{
+		max-width: 100%;
+	}
+}
+
+.itemIMG{
+	margin-bottom: @mainMarginS;
+	&.img-full{
+		img{
+			width: 100%;
+			max-width: 100%;
+			min-width: 100%;
+		}
+	}
+}
+
+// entry Footer
+.entry-footer{
+	margin-bottom: @mainMarginL;
+	margin-top:8px;
+}
+
+/* Categories Blog 
+=======================================*/
+#CategoriesList{
+	#SubCategoriesList{
+		[class*="span"],
+		[class^="span"]{
+			margin-bottom: @mainMarginL;
+		}
+		.subCategoryImage{
+			position: relative;
+			img{
+				width: 100%;
+				max-width: 100%;
+			}
+			.subCategoryTitle{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				clear: both;
+				padding: @mainPaddingS 0;
+				margin: 0;
+				font-family: @sansSemiBold;
+				font-size: @titleSizeSM;
+				line-height: 1;
+				text-transform: uppercase;
+			}
+		}
+		.subCategoryDescWrap{
+			.subCategoryReadmore{
+				margin-bottom:-@mainMarginXM;
+			}
+		}	
+	}
+}
+
+
+/* Joomla! Blog layout 
+============================================*/
+.blog{
+	.items-row{
+		&.row-fluid{
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* Joomla! Contnet Details
+=============================================*/
+article{
+	.entry-header{
+		.transition(all .3s linear 0s);
+		margin-bottom: @mainMarginS;
+		.entry-title{
+			.transition(all .3s linear 0s);
+			&:hover{
+				.transition(all .3s linear 0s);
+			}
+		}
+	}
+	.image-fulltext{
+		&.pull-left{
+			max-width: 40%;
+			.image-fulltext-inner{
+				margin: 0 @mainMarginM @mainMarginM 0;
+			}
+		}
+		&.pull-right{
+			max-width: 40%;
+			.image-fulltext-inner{
+				margin: 0 0 @mainMarginM @mainMarginM;
+			}
+		}
+		&.pull-none{
+			.image-fulltext-inner{
+				margin: 0 0 @mainMarginM 0;
+			}
+		}
+	}
+}
+
+//Page navigation
+ul {
+	&.pagenav {
+		list-style:none;
+		padding: 0;
+		clear: both;
+		margin-top: 10px;
+		margin-left: 0;
+		overflow: hidden;
+		.pagenav-prev {
+			float:left;
+		}
+		.pagenav-next {
+			float:right;
+		}
+	}
+}
+
+//Joomla Core
+dl {
+	dt,dd {
+		display:inline;
+	}
+}
+
+// Read more link
+
+.read-more,
+.readmore{
+	text-transform: capitalize;
+	font-family: @sansBold;
+	color: @headeLinkColor;
+	&:hover{
+		color: @linkColor;
+	}
+	i{
+		font-weight: normal;
+		margin-left: 5px;
+		font-size: 9px;
+	}
+}
+
+
+/* Joomla! Module 
+================================= */
+
+/* Joomla! Search module */
+
+.search{
+	form {
+		&.form-inline{
+			position: relative;
+			input{
+				.border-radius(5px);
+				.box-shadow(1px 1px 2px #ccc);
+			}
+			button{
+				position: absolute;
+				top: 0;
+				border: 0;
+				background: no-repeat;
+				text-shadow:none;
+				.border-radius(0);
+				&.pull-right{
+					right: 0
+				}
+				&.pull-left{
+					left: 0;
+				}
+				[class*='icon-'],
+				[class^='icon-'],
+				[class*='fa-'],
+				[class^='fa-']{
+					color: #cccccc;
+				}
+			}
+		}
+	}
+}
+
+
+// Joomla! Component
+//===========================
+
+/* Comp Contact */
+.contactDtailsWrap{
+	margin-top: @mainMarginL;
+	.contact-left{
+		> .entry-header{
+			margin-bottom: @mainMarginM;
+		}
+		[class*='jicons-'],
+		[class^='jicons-']{
+			font-family: @sansBold ;
+		}
+		.contact-contactinfo {
+			margin-bottom: @mainMarginL;
+			> div{
+				margin-bottom: @mainMarginM;
+			}
+		}
+		.contact-links{
+			h2.entry-title{
+				font-size: @h3SizeSmall;
+				margin-bottom: @mainMarginM + 5;
+			}
+			[class*='icon-'],
+			[class^='icon-'],
+			[class*='fa-'],
+			[class^='fa-']{
+				font-size: 20px;
+				color: #ccc;
+				.transition(all .3s linear 0s);
+				&:hover{
+					color: @mainColor;
+				}
+			}
+		}
+	}
+	
+	.contact-right{
+		> .entry-header{
+			margin-bottom: @mainMarginM;
+		}
+		form{
+			margin-top: @mainMarginM;
+			label{
+				color: @mainColor;
+				font-weight: 300;
+			}
+			.contactMessage{
+				.contactButton{
+					margin-top: @mainMarginM;
+				}
+			}
+		}
+	}
+}
+
+/* Comp Users */
+//Login page
+.JMLoginFrontLoginFormWrap{
+	max-width: 370px;
+	margin: 0 auto;
+	input#remember{ margin-top: 5px;}
+}
+
+// Remind Page
+.RemindFieldWrap{
+	margin-bottom: @mainMarginL;
+	input{
+		width: auto;
+		max-width: 300px;
+	}
+}
+
+// Reset Page
+.ResetFieldWrap{
+	margin-bottom: @mainMarginL;
+	input{
+		width: auto;
+		max-width: 300px;
+	}
+}
+
+// Profile Edit Page
+.profileEdit{
+	form{
+		fieldset{
+			width: 50%;
+		}
+		.memberEditButon{
+			margin-top: @mainMarginL;
+			text-align: center;
+		}
+	}
+}
+
+// Comp Finder 
+
+ul#finder-filter-select-list{
+	list-style: none;
+}
+
+//Labels
+label{
+	&.invalid{
+		color:lighten(@red,10%);
+	}
+}
+
+// HTML tags
+p{
+}
+h1{
+	font-size: @titleSizeL;
+}
+h2{
+	font-size: @titleSizeM;
+}
+h3{
+	font-size: @titleSize;
+	font-family: @sansSemiBold;
+}
+h4{
+	font-size: @titleSizeS;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight: normal;
+	padding: 0;
+	margin: 0 0 @mainMargin 0;
+	line-height: 1;
+	font-family: @sansSemiBold;
+}
+
+//HTML Tags
+
+form{
+	margin:0;
+	input{
+		&[type='text'],
+		&[type="password"],
+		&[type="datetime"],
+		&[type="datetime-local"],
+		&[type="date"],
+		&[type="month"],
+		&[type="time"],
+		&[type="week"],
+		&[type="number"],
+		&[type="email"],
+		&[type="url"],
+		&[type="search"],
+		&[type="tel"],
+		&[type="color"]{
+			background: @inputBackground;
+			border:@borderW1 @inputBorder;
+			color: @mainColor;
+			width: 100%;
+			padding: 10px 0;
+			margin-bottom: @mainMargin;
+			text-indent: 10px;
+			line-height: 20px;
+			height: 20px;
+			outline: none;
+			font-family: @sansSemiBold;
+			.box-shadow(none);
+			.border-radius(0);
+
+			&:active,
+			&:focus{
+				//.box-shadow(0 0 8px fade(@mainColor,60%));
+				.box-shadow(none);
+				border-color: @inputBorderHover;
+				outline: none;
+			}
+		}
+		&[type="radio"], 
+		&[type="checkbox"]{
+			margin: 0;
+			outline: none;
+		}
+	}
+	textarea{
+		background: @inputBackground;
+		border:@borderW1 @inputBorder;
+		width: 100%;
+		height: 180px;
+		padding: 0;
+		outline: none;
+		color: @mainColor;
+		font-family: @sansSemiBold;
+		.box-shadow(none);
+		.border-radius(0);
+		text-indent: 10px;
+		
+		&:active,
+		&:focus{
+			//.box-shadow(0 0 8px fade(@mainColor,60%));
+			.box-shadow(none);
+			border-color: @inputBorderHover;
+			outline: none;
+		}	
+	}
+	input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus{
+		.box-shadow(none);
+		border-color: @inputBorderHover;
+	}
+}
+
+label, input, button, select, textarea{
+	font-size: @baseFontSize;
+	font-family: @sansRegular;
+}
+// End HTML Tags
+
+.list-striped, .row-striped {
+    border-top: 1px solid #F1F0F0;
+    line-height: 18px;
+    list-style: none outside none;
+    margin-left: 0;
+    text-align: left;
+    vertical-align: middle;
+}
+.list-striped li:nth-child(2n+1), 
+.list-striped dd:nth-child(2n+1), 
+.row-striped .row:nth-child(2n+1), 
+.row-striped .row-fluid:nth-child(2n+1) {
+    background: #F9F9F9;
+    .transition(all .3s linear 0s);
+}
+.list-striped li, 
+.list-striped dd, 
+.row-striped .row, 
+.row-striped .row-fluid {
+    border-bottom: 1px solid #F1F0F0;
+    padding: 8px;
+}
+
+.label-info, .badge-info {
+	background: @linkColor;
+	
+}
+.list-striped li:hover, 
+.list-striped dd:hover, 
+.row-striped .row:hover, 
+.row-striped .row-fluid:hover {
+    background:@linkColor;
+    padding-left: 25px;
+    .transition(all .3s linear 0s);
+    *{
+    	color: #fff;
+    }
+    .label-info, .badge-info {
+		background: fade(@linkColor,20%);
+		
+	}
+}
+

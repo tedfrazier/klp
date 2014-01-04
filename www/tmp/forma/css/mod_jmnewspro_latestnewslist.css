@@ -1,0 +1,14 @@
+.jmnewspro.latestnewslist span.title,
+.jmnewspro.latestnewslist span.created{
+  display: block;
+  width:100%;
+}
+.jmnewspro.latestnewslist .jmnewspro-item{
+  border-bottom: 1px solid #333;
+  display:block;
+  overflow: hidden;
+  height: auto !important;
+  padding-bottom: 10px;
+ }
+.rtl .jmnewspro.latestnewslist span.title,
+.rtl .jmnewspro.latestnewslist span.created {}

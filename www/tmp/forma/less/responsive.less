@@ -1,0 +1,500 @@
+/**
+ * @package Helix Framework
+ * @author JoomShaper http://www.joomshaper.com
+ * @copyright Copyright (c) 20010 - 2013 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or later
+*/
+
+.responsive {
+
+	@media (max-width:1200px) and (min-width:1100px){
+		.container{
+			width: 1060px;
+		}
+
+		// JM News Pro - Porfolio 4cols
+		.portfolio{
+			&.cols4{
+				.jmnewsprohover{
+					.slide-inner{
+						.padding2{
+							padding-top: 30px;
+
+							.btn-small{
+								padding: 3px 5px;
+								font-size: 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+		// JM Gallery Videos
+		#jm-videogalleries {
+			.jmvideogalleries_title_desc{
+				padding-top: 70px;
+			}
+		}
+	}
+	@media(max-width:1169px){
+		header,section,footer{
+			&[id^="sp-"]{
+				>.container{
+					width: auto!important;
+					padding: 0 20px;
+				}
+			}
+		}
+		#sp-fp-tweets-wrapper{
+			.container{
+				width: auto!important;
+				padding: 0 20px;
+				.jm-twitter-pre{
+					left: -15px;
+				}
+				.jm-twitter-next{
+					right: -15px;
+				}
+			}
+		}
+	}
+	@media(max-width:1099px) and (min-width:980px){
+		// Page title 
+		#sp-page-title-wrapper{
+			.module .jm_pagetitle h2{
+				padding: 10px 0;
+			}
+		}
+		// FP message
+		#sp-fp-message-wrapper {
+			font-size: 24px;
+			a{
+				&.btn{
+					font-size: 14px;
+				}
+			}
+		}
+		// FP News 1
+		#sp-fp-news1-wrapper{
+			padding-top: 20px;
+			.module{
+				.header{
+					padding-top: 0;
+				}
+			}
+		}
+		// FP News 2
+		#sp-fp-news2-wrapper{
+			padding: 20px 0;
+			.module{
+				.header{
+					padding-top: 0;
+				}
+			}
+		}
+		// Fp Clients
+		#sp-fp-clients-wrapper{
+			.logoslider{
+				padding-bottom: 0;
+			}
+		}
+	}
+	@media (max-width: 979px) {
+		#sp-header-wrapper{
+			#sp-logo{
+				.logo-wrapper {
+					padding: 15px 0;
+					.logo{
+						line-height: normal;
+					}
+				}
+			}
+			#sp-menu{
+				min-height: 1px;
+			}
+			.sp-main-menu-toggler{
+				top: 10px;
+			}
+			.sp-mobile-menu{
+				top: 50px;
+			}
+
+		}
+		// Page title 
+		#sp-page-title-wrapper{
+			.module .jm_pagetitle h2{
+				padding: 10px 0;
+			}
+		}
+		// FP message
+		#sp-fp-message-wrapper{
+			font-size: 24px;
+			a.btn{
+				padding: 9px 6px;
+				font-size: 12px;
+			}
+		}
+		// FP News 1
+		#sp-fp-news1-wrapper{
+			padding-top: 20px;
+			.module{
+				.header{
+					padding-top: 0;
+				}
+			}
+		}
+		// FP News 2
+		#sp-fp-news2-wrapper{
+			padding: 20px 0;
+			.module{
+				.header{
+					padding-top: 0;
+				}
+			}
+		}
+		// Fp Clients
+		#sp-fp-clients-wrapper{
+			.logoslider{
+				padding-bottom: 0;
+			}
+		}
+		// FP Testinomial 
+		#sp-fp-testinomial-wrapper{
+			.module {
+				&.container{
+					padding: 0 20px;
+				}
+			}
+		}
+	}
+	@media (max-width:800px){
+		// FP message
+		#sp-fp-message-wrapper{
+			font-size: 20px;
+			a.btn{
+				padding: 9px 6px;
+				font-size: 12px;
+			}
+		}
+		// FP Rweets
+		.twitterSearchesNTweet {
+			> div{
+				.twitterSearchesNUser, 
+				.twitterSearchesNTime, 
+				.twitterSearchesNText {
+					line-height: normal;
+				}
+			}
+		}
+		// Bottom sections
+		#sp-bottom-wrapper{
+			padding:@mainPaddingL 0 0 0;
+			[class*="span"],
+			[class^="span"]{
+				width: 50%;
+				margin: 0 0 @mainMarginL 0;
+				padding: 0;
+				> .module{
+					padding: 0 10px;
+				}
+			}
+		}
+	}
+	@media (min-width:641px) and (max-width:768px) {
+		// Page title section
+		#sp-page-title-wrapper{
+			.module{
+				.jm_pagetitle{
+					h2{
+						padding: 10px 0;
+					}
+				}
+			}
+		}
+		//  Feature sections
+		#sp-feature-wrapper{
+		}
+		// FP Message
+		#sp-fp-message-wrapper{
+			font-size: 18px;
+			a.btn{
+				padding: 9px 3px;
+				font-size: 13px;
+			}
+		}
+		// FP News 1
+		#sp-fp-news1-wrapper{
+			padding-top: 20px;
+			.module{
+				.header{
+					padding-top: 0;
+				}
+			}
+		}
+		// FP News 2
+		#sp-fp-news2-wrapper{
+			padding: 20px 0;
+			.module{
+				.header{
+					padding-top: 0;
+				}
+			}
+		}
+		// Fp Clients
+		#sp-fp-clients-wrapper{
+			padding:20px 0;
+			.logoslider{
+				padding-bottom: 0;
+			}
+		}
+		// FP Our Services
+		#sp-our-service-wrapper {
+			.row-fluid{
+				[class*="span"],
+				[class^="span"]{
+					width: 100%;
+					margin-left: 0;
+					margin-right: 0;
+					height: auto !important;
+					+ [class*="span"],
+					+ [class^="span"]{
+						border:none;
+						margin-top: 20px;
+						> div {
+							padding-left: 0;
+							padding-right: 0;
+						}
+					}
+				}
+			}
+		}
+		// Main Component
+		#sp-main-body-wrapper{
+			margin-bottom: 0;
+
+			// K2 item details
+			#k2Container{
+				&.itemView{
+					&.Portfolio{
+						[class*="span"],
+						[class^="span"]{
+							width: 100%;
+							margin-left: 0;
+						}
+					}
+				}
+			}
+		}
+		
+		// Bottom sections
+		#sp-bottom-wrapper{
+			padding:@mainPaddingL 0 0 0;
+			[class*="span"],
+			[class^="span"]{
+				width: 50%;
+				margin: 0 0 @mainMarginL 0;
+				padding: 0;
+				float: left;
+				> .module{
+					padding: 0 10px;
+				}
+			}
+		}
+		// Footer sections
+		#sp-footer-wrapper{
+			padding: 10px 0;
+		}
+
+		// Typography
+		//============================
+		/* List Style 
+		-------------------*/
+
+		.style-list {
+			&.checked{
+				li{
+					padding: 0 0 0 @mainPaddingM !important;
+					font-size:14px !important;
+				}
+			}
+		}
+
+	}
+
+	@media (max-width:767px) {
+		&.bg {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		#sp-feature-wrapper {
+			padding:20px 0;
+			#feature {
+				h1{
+					font-size:200%;
+					line-height:200%;
+				}
+				p{
+					font-size:100%;
+				}
+				.btn{
+					.btn-mini();
+					margin-bottom:5px;
+				}
+			}
+		}
+
+		// Latest News
+		#sp-fp-latest-news-wrapper{
+			margin-top: 15px;
+			.module{
+				h3.header{
+					text-align: center;
+					.title-border{
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+			}
+		}
+
+		#sp-fp-message-wrapper{
+			text-align: center;
+		}
+
+		// FP News 1
+		#sp-fp-news1-wrapper{
+			padding-top: 20px;
+			.module{
+				.header{
+					padding-top: 0;
+				}
+			}
+
+			#sp-fp-news1-img{
+				text-align: center;
+			}
+		}
+		// FP News 2
+		#sp-fp-news2-wrapper{
+			padding: 20px 0;
+			.module{
+				.header{
+					padding-top: 0;
+				}
+			}
+			#sp-fp-news2-img{
+				text-align: center;
+			}
+		}
+		// Fp Clients
+		#sp-fp-clients-wrapper{
+			padding:20px 0;
+			.logoslider{
+				padding-bottom: 0;
+			}
+		}
+		// FP Our Services
+		#sp-our-service-wrapper {
+			.row-fluid{
+				[class*="span"],
+				[class^="span"]{
+					width: 100%;
+					margin-left: 0;
+					margin-right: 0;
+					height: auto !important;
+					+ [class*="span"],
+					+ [class^="span"]{
+						border:none;
+						margin-top: 20px;
+						> div {
+							padding-left: 0;
+							padding-right: 0;
+						}
+					}
+				}
+			}
+		}
+		// Footer sections
+		#sp-footer-wrapper {
+			text-align: center;
+			padding: 10px 20px;
+			#sp-footer2{
+				ul{
+					float: none;
+					text-align: center;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	@media(max-width:640px){
+		header,section,footer{
+			&[id^="sp-"]{
+				> .container{
+					padding: 0 10px;
+				}
+				.module {
+						&.container{
+							padding: 0 10px; 
+						}
+					}
+			}
+		}
+		// FP Rweets
+		.twitterSearchesNTweet {
+			> div{
+				.twitterSearchesNUser, 
+				.twitterSearchesNTime, 
+				.twitterSearchesNText {
+					line-height: normal;
+				}
+			}
+		}
+		// Bottom sections
+		#sp-bottom-wrapper{
+			[class*="span"],
+			[class^="span"]{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				> .module{
+					padding: 0 0;
+				}
+			}
+		}
+		// Joomla content
+		/* Joomla! Contnet Details
+		=============================================*/
+		article{
+			.image-fulltext{
+				&.pull-left{
+					width: 100%;
+					max-width: 100%;
+					.image-fulltext-inner{
+						margin: 0 0 @mainMarginM 0;
+					}
+				}
+				&.pull-right{
+					max-width: 100%;
+					width: 100%
+					.image-fulltext-inner{
+						margin: 0 0 @mainMarginM 0;
+					}
+				}
+				&.pull-none{
+					.image-fulltext-inner{
+						margin: 0 0 @mainMarginM 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+//Fixed width
+.fixed{
+	.hidden-desktop{
+		display:none;
+	}
+}

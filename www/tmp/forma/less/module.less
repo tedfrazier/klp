@@ -1,0 +1,560 @@
+/**
+ * @package Helix Framework
+ * @author JoomShaper http://www.joomshaper.com
+ * @copyright Copyright (c) 20010 - 2013 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or later
+*/
+
+//module variation
+.module {
+	margin-bottom:25px;
+	h3.header {
+		font-size:@titleSize;
+		font-weight:normal;
+		margin:0 0 @mainPadding 0;
+		padding:0;
+		line-height:normal;
+		line-height: 1;
+		text-transform:uppercase;
+		font-family: @sansSemiBold;
+		span{
+			line-height: 1;
+			display: inline-block;
+		}
+		span.title-border{
+			width: 40px;
+			height: 2px;
+			display: block;
+			margin-top: 20px;
+		}
+	}
+	// Title have sub title
+	h3.header{
+		&.sub-title{
+			span.title{
+				display: block;
+			}
+			span.subtitle{
+				display: block;
+			}
+		}
+	}
+	// Title have small sub title 
+	&.sub-title-small {
+		h3.header{
+			&.sub-title{
+				span.title{
+					display: block;
+				}
+				span.subtitle{
+					display: block;
+					font-size: @titleSizeS;
+					text-transform: none;
+				}
+			}
+		}
+	}
+	&.title-white{
+		h3.header{
+			color: @white;
+			span.title-border{
+				background: @white;
+			}
+		}
+	}
+	&.title-small{
+		h3.header{
+			font-size: @titleSizeS;
+		}
+	}
+	&.title-medium{
+		h3.header{
+			font-size: @titleSizeM;
+		}
+	}
+	&.title-large{
+		h3.header{
+			font-size: @titleSizeL;
+			font-family: @sansRegular;
+			span.title-border{
+				width: 80px;
+			}
+		}
+	}
+	&.title-xlarge{
+		h3.header{
+			font-size: @titleSizeXL;
+			font-weight: normal;
+			margin-bottom: @mainMarginL;
+			font-family: @sansRegular;
+			span.title-border{
+				width: 100px;
+			}
+
+		}
+	}
+	&.title-none{
+		h3.header{
+			text-transform: none;
+		}
+	}
+	&.title-left{
+		h3.header{
+			text-align: left;
+		}
+	}
+	&.title-center{
+		h3.header{
+			text-align: center;
+			span.title-border{
+				margin: 20px auto 0 auto;
+			}
+		}
+		.mod-header-text{
+			text-align: center;
+		}
+	}
+	&.title-right{
+		h3.header{
+			text-align: right;
+			direction: rtl;		
+		}
+	}
+	&.title-bold{
+		h3.header{
+			font-family: @sansSemiBold;
+		}
+	}
+	&.title-on-left{
+		h3.header{
+			float: left;
+			width: 20%;
+		}
+		.mod-content{
+			width: 80%;
+		}
+	}
+
+	&.title-on-bottom{
+		position: relative;
+		.CustomContent {
+			&.hasBG{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				display: block;
+				padding: @mainPadding 0;
+			}
+		}
+	}
+
+	&.text-left{
+		.mod-content{
+			text-align: left;
+		}
+	}
+	&.text-center{
+		.mod-content{
+			text-align: center;
+		}
+	}
+	&.text-right{
+		.mod-content{
+			text-align: right;
+		}
+	}
+	&.text-justify{
+		.mod-content{
+			text-align: justify;
+		}
+	}
+	&.text-white{
+		.mod-content{
+			*{
+				color: @white;
+			}
+		}
+	}
+
+	&.contact-info{
+		.label{
+			float: left;
+			background:none;
+		    color:@mainColor;
+		    display: inline-block;
+		    font-size:@baseFontSize;
+		    line-height: normal;
+		    padding:0;
+		    text-shadow: none;
+		    vertical-align: baseline;
+		    white-space: nowrap;
+		    box-shadow: none;
+		    font-weight: normal;
+		}
+		.details{
+			padding-left: 90px;
+			display: block;
+		}
+	}
+	.mod-header-text{
+		padding-bottom: @mainPaddingL;
+		display: block;
+	}
+	
+	&.highlighted,
+	&.orange,
+	&.dark,
+	&.green,
+	&.maroon,
+	&.blue,
+	&.gray,
+	&.pink,
+	&.red {
+		h3 {
+			padding:0 0 10px 0;
+			border-bottom:1px solid @white;
+			color:@white;
+		}
+		padding:20px;
+		color:@white;
+		.border-radius(4px);
+		.box-shadow(0 1px 5px rgba(0,0,0,.6) inset);
+	}
+	
+	&.orange {
+		background:@orange;
+		a{
+		 color:#B66B00;
+			 
+		&:hover{
+			   color:#6F4100;
+			   }
+		}
+	}
+	
+	&.dark {
+		background:@black;
+		a{
+		 color:#777;
+			 
+		&:hover{
+			   color:#888;
+			   }
+		}
+	}
+	&.green {
+		background:@green;
+		a{
+		 color:#63E063;
+			 
+		&:hover{
+			   color:#43F043;
+			   }
+		}
+	}
+	&.maroon {
+		background:#F35D34;
+		a{
+		 color:#B4300D;
+			 
+		&:hover{
+			   color:#C93F19;
+			   }
+		}
+	}
+	&.blue {
+		background:@blue;
+		a{
+		 color:#47C9FF;
+			 
+		&:hover{
+			   color:#0073A3;
+			   }
+		}
+	}
+	&.gray {
+		background:@gray;
+		a{
+		 color:#999;
+			 
+		&:hover{
+			   color:#777;
+			   }
+		}
+	}
+	&.pink {
+		background:@pink;
+		a{
+		 color:#FF5C8F;
+			 
+		&:hover{
+			color:#FA2E6E;
+		   }
+		}
+	}
+	&.red {
+		background:@red;
+		a{
+		 color:#EE4538;
+			 
+		&:hover{
+			   color:#DA3F33;
+			   }
+		}
+	}
+
+	&.box{
+		border:1px solid #dddddd;
+		padding: 15px;
+	}
+	&.box-lightblue{
+		background: #91d9ee;
+		border-color:#91d9ee;
+	}
+	&.box-gray{
+		background: #eeeeee;
+	}
+	
+	pre{
+		word-break: keep-all;
+		color:@mainColor !important;
+	}
+	/* 3rd Modules style 
+	=========================================================*/
+	// Page Heading module
+	.jm_pagetitle{
+		h2{
+			margin: 0;
+			padding: 20px 0;
+			font-weight: normal;
+		}
+	}
+
+	// Icon top
+	&.jm-xhtml-icontop{
+		.header,
+		.mod-content{
+			position: relative; // fix for Chrome & Safari
+		}
+      	[class^="icon-"],
+      	[class^="fa-"],
+      	[class*="icon-"],
+      	[class*="fa-"] {
+			width: 100px;
+			height: 100px;
+			font-size: 35px;
+			color:#fff;
+			line-height: 100px;
+			display: inline-block;
+			position: relative;
+			margin-bottom: 30px;
+			cursor: pointer;
+			.transition(all 0.3s ease 0s);
+			.border-radius(50%);
+
+	        &:after{
+				background:none;
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 102px;
+				height: 102px;
+				z-index: -1;
+				.transition(all 0.3s linear 0s);
+				.scale(1.3);
+				.opacity(0);
+				.border-radius(50%);
+				.box-sizing(content-box);
+	        }
+		}
+		&:hover,
+		&:active,
+		&:focus{
+			[class^="icon-"],
+			[class^="fa-"],
+			[class*="icon-"],
+      		[class*="fa-"]{
+				color: #fff;
+				.scale(1);
+				.box-shadow(none);
+
+				&:after{
+					.opacity(100);
+					.scale(1);
+					top: -1px;
+					left: -1px;
+				}
+			}
+		}
+    }
+
+    /* JM NewsPro Module
+	================================ */
+	/* Layour news1*/
+	.consilium-news1{
+		&.jmnewspro{
+			h3.header{
+				margin-bottom: @mainMarginL;
+				padding-top: @mainPaddingL;
+			}
+			.slide-item-desc{
+				margin-bottom: @mainMarginL;
+			}
+			.read-more{
+				&:hover{
+				}
+			}
+		}
+	}
+	/* Layout News 2*/
+	.consilium-news2{
+		.slide-inner{
+			padding-left: @mainPaddingL;
+			h3.header{
+				padding: @mainPaddingL+@mainPadding 0 0 0;
+			}
+			.slide-item-desc{
+				margin-bottom: @mainMarginL;
+			}
+			.read-more{
+				&:hover{
+				}
+			}
+		}
+	}
+
+	/* Layout Portfolio */
+	
+
+	/* End JM NewsPro Module
+	================================ */
+
+	// Slider module
+	.rev_slider_wrapper{
+		.rev_slider{
+			.tp-caption{
+				ul{
+					visibility: visible;
+					li{
+						visibility: visible;
+						position: relative;
+						display: block;
+						text-indent: inherit;
+					}
+				}
+				a{
+					&:hover{
+						color: #fff;
+					}
+				}
+				&.big_white{
+					background: none;
+					font-size: 40px;
+					font-family: 'NovecentowideUltraLightBold';
+					letter-spacing: 1px;
+					font-weight: normal;
+					text-transform: uppercase;
+					padding: 0;
+					line-height: 1;
+					span{
+						line-height: 1;
+						padding: 0 0  11px 0;
+					}
+				}
+				&.medium_text{
+					font-size: 18px;
+					font-family: 'NovecentowideNormalRegular';
+					font-weight: normal;
+					text-transform: uppercase;
+					padding: 0;
+					line-height: 1;
+				}
+			}
+		}
+		.tparrows{
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			&.tp-leftarrow {
+				left: 0 !important;
+				background: @white url(../images/presets/@{preset}/leftarrow.png) center center no-repeat;
+			}
+			&.tp-rightarrow {
+				right: 0 !important;
+				background: @white url(../images/presets/@{preset}/rightarrow.png) center center no-repeat;
+			}
+			&:hover{
+				padding: 5px;
+				.transition(all 0.3s linear 0s);
+			}
+		}
+	}
+	/* Joomla! Search module */
+
+	.search{
+		form {
+			&.form-inline{
+				position: relative;
+				.searchInputWrap{
+					padding: 3px;
+					border: 1px solid #f9f9f9;
+					.border-radius(3px);
+					.transition(all 0.3s linear 0s);
+					&:active,
+					&:focus{
+						border-color: @mainColor;
+						.transition(all 0.3s linear 0s);
+					}
+					input{
+						.border-radius(3px);
+						.box-shadow(none);
+						border: 0;
+						background: #f9f9f9;
+						height: 20px;
+						line-height: 20px;
+						margin: 0;
+					}
+				}
+				
+				button{
+					position: absolute;
+					top: 6px;
+					border: 0;
+					background: no-repeat;
+					text-shadow:none;
+					.border-radius(0);
+					&.pull-right{
+						right: 0;
+						border-left:1px solid #eeeeee;
+					}
+					&.pull-left{
+						left: 0;
+						border-right:1px solid #eeeeee;
+					}
+					[class*='icon-'],
+					[class^='icon-']{
+						color: #cccccc;
+						margin-left: -2px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Responsive Version
+@media(max-width:767px){
+	.module{
+		h3.header{
+			text-align: center !important;
+
+			.title-border{
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+		}
+	}
+}
