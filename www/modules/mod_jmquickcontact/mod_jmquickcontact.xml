@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2013 Jm Quick Contact. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+-->
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>Jm Quick Contact</name>
+	<author>JoomlaMan.Com</author>
+	<creationDate>Nov 2013</creationDate>
+	<copyright>Copyright (c) 2013 JmQuickContact. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>dev@joomlaman.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[
+	
+	]]>
+	</description>
+
+	<files>
+		<filename module="mod_jmquickcontact">mod_jmquickcontact.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>admin</folder>
+		<folder>assets</folder>
+		<folder>language</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_jmquickcontact.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_jmquickcontact.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_jmquickcontact/admin/elements">
+				<field addfieldpath="/modules/mod_jmquickcontact/admin/elements" type="asset" name="asset" path="modules/mod_jmquickcontact/admin/assets/" />
+				<field
+					name="subject"
+					type="text" class="jm-field"
+					label="MOD_JMQUICKCONTACT_SUBJECT_LABEL"
+					description="MOD_JMQUICKCONTACT_SUBJECT_DESC"  
+				/>
+				<field
+					name="recipients"
+					type="text"  class="jm-field"
+					label="MOD_JMQUICKCONTACT_RECIPIENTS_LABEL"
+					description="MOD_JMQUICKCONTACT_RECIPIENTS_DESC"
+				/>
+				<field
+					name="template"
+					type="textarea"  class="jm-field"
+					label="MOD_JMQUICKCONTACT_TEMP_LABEL"
+					description="MOD_JMQUICKCONTACT_TEMP_DESC"
+					default="Hello, You have message form JoomlaMan. Name: [name] Email: [email] Phone: [phone] Message: [message]"
+				/>
+			</fieldset>
+			<fieldset name="fields" label="Form fields">
+				<field
+					name="name"
+					type="text"  class="jm-field"
+					label="MOD_JMQUICKCONTACT_NAME_LABEL"
+					description="MOD_JMQUICKCONTACT_NAME_DESC"
+					default=""
+				/>
+				<field
+					name="email"
+					type="text"  class="jm-field"
+					label="MOD_JMQUICKCONTACT_EMAIL_LABEL"
+					description="MOD_JMQUICKCONTACT_EMAIL_DESC"
+					default=""
+				/>
+				<field
+					name="phone"
+					type="text"  class="jm-field"
+					label="MOD_JMQUICKCONTACT_PHONE_LABEL"
+					description="MOD_JMQUICKCONTACT_PHONE_DESC"
+					default=""
+				/>
+				<field
+					name="message"
+					type="text"  class="jm-field"
+					label="MOD_JMQUICKCONTACT_MSG_LABEL"
+					description="MOD_JMQUICKCONTACT_MSG_DESC"
+					default=""
+				/>
+				<field
+					name="send"
+					type="text"  class="jm-field"
+					label="MOD_JMQUICKCONTACT_SEND_LABEL"
+					description="MOD_JMQUICKCONTACT_SEND_DESC"
+					default="Send"
+				/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text" class="jm-field"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/> 
+			</fieldset>
+		</fields>
+	</config>
+</extension>

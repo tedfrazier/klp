@@ -1,0 +1,27 @@
+.JMContactWrap .JMContactField 	input{
+	border-radius:0;
+	font-size: 16px;
+	height: 20px;
+	line-height: 20px;
+	padding: 10px 0;
+	width: 100%;
+	text-align: center;
+	text-indent: 0;
+}
+.JMContactWrap .JMContactField textarea {
+	font-size: 16px;
+	text-align: center;
+	text-indent: 0;
+	padding-top: 5px;
+}
+.JMContactWrap .JMContactButton{
+	text-align: center;
+	margin-top: 10px;
+}
+.JMContactWrap .JMContactButton input{
+}
+.JMForma.JMContactWrap{
+	max-width: 570px;
+	margin: 0 auto;
+	text-align: center;
+}

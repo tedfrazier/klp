@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension 
+	type="module" 
+	client="site"
+	 method="upgrade">	 
+	<name>JM Google Maps</name>
+    <author>JoomlaMan.com</author>
+	<creationDate>25 Oct 2013</creationDate>
+   <copyright>Copyright (C) 2012 JoomlaMan. All rights reserved.</copyright>
+   <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+   <authorEmail>support@joomlaman.com</authorEmail>
+   <authorUrl>http://www.joomlaman.com</authorUrl>
+	<version>2.0.7</version>
+	<scriptfile>script.php</scriptfile>
+	<description>
+	<![CDATA[
+		<style type="text/css">
+			span.readonly { padding: 10px; font-family: Arial; font-size:13px !important; font-weight: normal !important; text-align: justify; color: #4d4d4d; line-height: 24px; }
+			span.readonly h1 { clear:both; font-family: Georgia, sans-serif; font-size:38px; margin:30px 20px 23px; padding:0px 0px 24px 10px; color:#333; border-bottom: 1px solid #eee; font-weight: normal; }
+			span.readonly p { margin: 0 26px 10px }
+			span.readonly p a { color: #8e0b8c }
+			span.readonly p.homepage { margin-top: 30px }
+			span.readonly p.license { border-top: 1px solid #eee; font-size: 11px; margin: 30px 26px 0; padding: 6px 0; }
+		</style>
+		<span class="readonly"><h1>JM Map<small> ver 2.0.7</small></h1><p>Bring google maps to your website by the simplest & easiest way. Using Google Maps version 3 services, JM Google Maps support you input both Address and Coordinate, create your custom marker with title, images, description...</p> <p class='homepage'><a href='http://joomlaman.com/extensions/jmmap.html' target='_blank'>Learn more at the JMM project website.</a></p><p class='license'>JMM is released under the <a target="_blank" href="http://www.gnu.org/licenses/gpl-2.0.html">GNU/GPL v2 license.</a></p></span>
+		]]>
+	</description>
+	<files>
+		<filename module="mod_jmgooglemaps">mod_jmgooglemaps.php</filename>
+		<filename module="mod_jmgooglemaps">helper.php</filename>
+		<filename module="mod_jmgooglemaps">index.html</filename>
+		<folder module="mod_jmgooglemaps">tmpl</folder>
+		<folder module="mod_jmgooglemaps">admin</folder>
+		<folder module="mod_jmgooglemaps">language</folder>
+		<folder module="mod_jmgooglemaps">assets</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_jmgooglemaps.ini</language>
+	</languages>
+	<config>
+		<fields name="params">			
+			<fieldset name="basic">
+				<field addfieldpath="/modules/mod_jmgooglemaps/admin/elements" type="asset" name="asset" path="modules/mod_jmgooglemaps/admin/assets/"/>
+				<field type="text" class="jm-field" name="apikey" label="MOD_JMGOOGLEMAPS_API_LBL" description="MOD_JMGOOGLEMAPS_API_DESC"/>
+				<field 
+					class="jm-field single"
+					name="mapType" 
+					type="list" 
+					default="roadmap"
+					label="MOD_JMGOOGLEMAPS_MAP_TYPE" description="MOD_JMGOOGLEMAPS_MAP_TYPE_DESC">
+					<option value="hybrid">Hybrid</option>
+					<option value="roadmap">Roadmap</option>
+					<option value="satellite">Satellite</option>
+					<option value="terrain">Terrain</option>
+				</field>
+				<field name="mapCenterType" type="radio" default="address" class="jm-field" label="MOD_JMGOOGLEMAPS_MAPCENTER_TYPE_LABEL" description="MOD_JMGOOGLEMAPS_MAPCENTER_TYPE_DESC">
+					<option value="address">Address</option>
+					<option value="coordinate">Coordinate</option>
+				</field>
+				<field name="mapCenterAddress" class="jm-field" default="New York, United States" type="text" label="MOD_JMGOOGLEMAPS_MAPCENTER_ADDRESS_LABEL" description="MOD_JMGOOGLEMAPS_MAPCENTER_ADDRESS_DESC"></field>
+				<field name="mapCenterCoordinate" class="jm-field" default="40.7143528, -74.0059731" type="text" label="MOD_JMGOOGLEMAPS_MAPCENTER_COORDINATE_LABEL" description="MOD_JMGOOGLEMAPS_MAPCENTER_COORDINATE_DESC"></field>
+				<field
+					class="jm-field"
+					name="width"
+					type="text"
+					default="auto"
+					label="MOD_JMGOOGLEMAPS_WIDTH"
+					description="MOD_JMGOOGLEMAPS_WIDTH_DESC">
+				</field>
+				<field
+					class="jm-field"
+					name="height"
+					type="text"
+					default="350"
+					label="MOD_JMGOOGLEMAPS_HEIGHT"
+					description="MOD_JMGOOGLEMAPS_HEIGHT_DESC">
+				</field>
+				<field
+					class="jm-field"
+					name="zoom"
+					type="text"
+					default="13"
+					label="MOD_JMGOOGLEMAPS_ZOOM"
+					description="MOD_JMGOOGLEMAPS_ZOOM_DESC">
+				</field>
+				<field
+					name="zoomControl"
+					type="radio"
+					class="jm-field"
+					default="true"
+					label="MOD_JMGOOGLEMAPS_ZOOMCONTROL"
+					description="MOD_JMGOOGLEMAPS_ZOOMCONTROL_DESC">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+				<field
+					name="panControl"
+					type="radio"
+					default="true"
+					class="jm-field"
+					label="MOD_JMGOOGLEMAPS_PANCONTROL"
+					description="MOD_JMGOOGLEMAPS_PANCONTROL_DESC">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+				<field
+					name="mapTypeControl"
+					type="radio"
+					default="true"
+					class="jm-field"
+					label="MOD_JMGOOGLEMAPS_MAPTYPECONTROL"
+					description="MOD_JMGOOGLEMAPS_MAPTYPECONTROL_DESC">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+				<field
+					name="scaleControl"
+					type="radio"
+					default="true"
+					class="jm-field"
+					label="MOD_JMGOOGLEMAPS_SCALECONTROL"
+					description="MOD_JMGOOGLEMAPS_SCALECONTROL_DESC">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+				<field
+					name="overviewMapControl"
+					type="radio"
+					default="true"
+					class="jm-field"
+					label="MOD_JMGOOGLEMAPS_OVERVIEWCONTROL"
+					description="MOD_JMGOOGLEMAPS_OVERVIEWCONTROL_DESC">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+				<field
+					name="streetViewControl"
+					type="radio"
+					default="true"
+					class="jm-field"
+					label="MOD_JMGOOGLEMAPS_STREETVIEWCONTROL"
+					description="MOD_JMGOOGLEMAPS_STREETVIEWCONTROL_DESC">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="markers-manager" label="MARKERS_MANAGER" addfieldpath="/modules/mod_jmgooglemaps/admin/elements">	
+				<field  type="markers" name="markes" label="JMG_MARKERS_LABEL" description="JMG_MARKERS_DESC"/>
+			</fieldset>
+			<fieldset name="weather_cloud" label="MOD_JMGOOGLEMAPS_WEATHER_CLOUD">	
+				<field 
+					name="weather" 
+					type="radio" 
+					default="0" 
+					class="jm-field"
+					label="MOD_JMGOOGLEMAPS_SHOW_WEATHER" 
+					description="MOD_JMGOOGLEMAPS_SHOW_WEATHER_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field 
+					name="temperatureUnit" 
+					type="radio" 
+					default="f" 
+					class="jm-field"
+					label="MOD_JMGOOGLEMAPS_TEMPERATUREUNIT" 
+					description="MOD_JMGOOGLEMAPS_TEMPERATUREUNIT_DESC">
+					<option value="f">FAHRENHEIT</option>
+					<option value="c">CELSIUS</option>
+				</field>
+				<field 
+					name="cloud" 
+					type="radio" 
+					default="1" 
+					class="jm-field"
+					label="MOD_JMGOOGLEMAPS_SHOW_CLOUD" 
+					description="MOD_JMGOOGLEMAPS_SHOW_WEATHER_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					class="jm-field"
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					class="jm-field single"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					class="jm-field"
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>	
+		</fields>
+	</config>
+	<updateservers>
+        <server type="extension" name="JM Google Maps" priority="1">http://extensions.joomlaman.com/jmgooglemap/update.xml</server>
+	</updateservers>
+</extension>

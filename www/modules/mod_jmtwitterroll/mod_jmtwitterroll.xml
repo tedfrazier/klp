@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="module" method="upgrade">
+	<name>JM Twitter Roll - The Module</name>
+	<creationDate>04 Nov 2013</creationDate>
+	<version>1.0.5</version>
+	<author>JoomlaMan</author>
+	<copyright>Copyright 2012 - joomlaman.com</copyright>
+	<license>http://www.gnu.org/copyleft/lgpl.html</license>
+	<authorEmail>support@joomlaman.com</authorEmail>
+	<authorUrl>http://www.joomlaman.com</authorUrl>
+	<description>JM Twitter-Roll, show Twitter posts use API ver 1.1.</description>
+	<files>
+		<filename module="mod_jmtwitterroll">mod_jmtwitterroll.php</filename>
+		<filename>mod_jmtwitterroll.xml</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>sources</folder>
+		<folder>admin</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_jmtwitterroll.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="searchTerm" type="text" class="jm-field" default="realjoomlaman" label="MOD_JMTWITTERROLL_SEARCH_TERM_LBL" description="MOD_JMTWITTERROLL_SEARCH_TERM_DESC" />
+				<field name="oauth_access_token" class="jm-field" type="text" default="123293200-tJVbU1aNsxedwCOGTsu1aCn9M2K3WRnmLuhuY2gR" label="MOD_JMTWITTERROLL_TOKEN_LBL" description="MOD_JMTWITTERROLL_TOKEN_DESC" />
+				<field name="oauth_access_token_secret" class="jm-field" type="text" default="xmVlqOUY0ilvbOFHqhbPBI7vgo2GRF855MyZwXXBY" label="MOD_JMTWITTERROLL_SECRET_LBL" description="MOD_JMTWITTERROLL_SECRET_DESC" />
+				<field name="consumer_key" type="text" class="jm-field" default="xsrZoe7IDkKYQKf3l3y4WQ" label="MOD_JMTWITTERROLL_CONSUMER_KEY_LBL" description="MOD_JMTWITTERROLL_CONSUMER_KEY_DESC" />
+				<field name="consumer_secret" type="text" class="jm-field" default="32prPwDeKEozpjycv448AESYX0fCaRKCkgaXZK5W8g" label="MOD_JMTWITTERROLL_CONSUMER_SECRET_LBL" description="MOD_JMTWITTERROLL_CONSUMER_SECRET_DESC" />
+				<field name="count" type="text" default="5" class="jm-field" label="MOD_JMTWITTERROLL_COUNT_LBL" description="MOD_JMTWITTERROLL_COUNT_DESC" />
+				<field name="height" type="text" default="300px" class="jm-field" label="MOD_JMTWITTERROLL_HEIGHT_LBL" description="MOD_JMTWITTERROLL_HEIGHT_DESC" />
+				<field name="width" type="text" default="auto" class="jm-field" label="MOD_JMTWITTERROLL_WIDTH_LBL" description="MOD_JMTWITTERROLL_WIDTH_DESC" />
+				<field name="jmtwitter_avatar" type="list" default="1" class="jm-field single" label="MOD_JMTWITTERROLL_AVATAR_LBL" description="MOD_JMTWITTERROLL_AVATAR_DESC">
+					<option value="0">MOD_JMTWITTERROLL_NONE</option>
+					<option value="1">MOD_JMTWITTERROLL_USERAVATAR</option>
+					<option value="2">MOD_JMTWITTERROLL_TWITTERICON</option>
+				</field>
+				<field name="pause" type="radio" default="0" class="jm-field" label="MOD_JMTWITTERROLL_PAUSE_LBL" description="MOD_JMTWITTERROLL_PAUSE_DESC">
+					<option value="0">JYES</option>
+					<option value="1">JNO</option>
+				</field>
+				<field name="time" type="radio" default="0" class="jm-field" label="MOD_JMTWITTERROLL_TIME_STAMP_LBL" description="MOD_JMTWITTERROLL_TIME_STAMP_DESC">
+					<option value="0">JYES</option>
+					<option value="1">JNO</option>
+				</field>
+				<field name="bird" type="radio" default="0" class="jm-field" label="MOD_JMTWITTERROLL_BIRD_IMAGE_LBL" description="MOD_JMTWITTERROLL_BIRD_IMAGE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="tweetScroll" type="text" class="jm-field" default="500" label="Tweet scroll speed" description="Tweet scroll speed" />
+				<field name="moduleclass_sfx" class="jm-field" type="text" default="" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="load_jquery" type="list" class="jm-field single" default="2" label="MOD_JMTWITTERROLL_LOAD_JQUERY_LBL" description="MOD_JMTWITTERROLL_LOAD_JQUERY_DESC">	
+					<option value="1">JYES</option>	
+					<option value="0">JNO</option>
+					<option value="2">JMAUTO</option>
+				</field>
+				<field addfieldpath="/modules/mod_jmtwitterroll/admin/elements" type="asset" name="asset" path="modules/mod_jmtwitterroll/admin/assets/" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="jmtwitterroll_layout" type="layout" default="default" class="jm-field" label="MOD_JMTWITTERROLL_LAYOUT_LBL" description="MOD_JMTWITTERROLL_LAYOUT_DECS"/>
+				<field name="auto" type="list" class="jm-field single" default="true" label="MOD_JMTWITTERROLL_AUTO_LBL" description="MOD_JMTWITTERROLL_AUTO_DESC">
+				  <option value="true">JYES</option>
+				  <option value="false">JNO</option>
+				</field>
+				<field name="timeout" type="text"  class="jm-field" default="4000" label="MOD_JMTWITTERROLL_TIMEOUT_LBL" description="MOD_JMTWITTERROLL_TIMEOUT_DESC"/>
+				<field name="touch" type="radio"  class="jm-field" default="1" label="MOD_JMTWITTERROLL_TOUCH_LBL" description="MOD_JMTWITTERROLL_TOUCH_DESC">
+				  <option value="false">JNO</option>
+				  <option value="true">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+        <server type="extension" name="JM Twitter Roll" priority="1">http://extensions.joomlaman.com/jmtwitterroll/update.xml</server>
+	</updateservers>
+</extension>

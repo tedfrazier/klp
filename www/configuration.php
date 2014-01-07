@@ -16,18 +16,18 @@ class JConfig {
 	public $user = 'klp';
 	public $password = 'YViZU98Rt';
 	public $db = 'klp_joomla';
-	public $dbprefix = 'a23ce_';
+	public $dbprefix = 'gb941_';
 	public $live_site = '';
-	public $secret = 'A8Qmo8TeiZLnPYYC';
+	public $secret = '6CVucJSMmP22vlnt';
 	public $gzip = '0';
 	public $error_reporting = 'default';
-	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help{major}{minor}:{keyref}';
+	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&amp;keyref=Help{major}{minor}:{keyref}';
 	public $ftp_host = '';
 	public $ftp_port = '';
 	public $ftp_user = '';
 	public $ftp_pass = '';
 	public $ftp_root = '';
-	public $ftp_enable = '0';
+	public $ftp_enable = '';
 	public $offset = 'UTC';
 	public $mailonline = '1';
 	public $mailer = 'mail';
@@ -56,14 +56,6 @@ class JConfig {
 	public $feed_limit = '10';
 	public $log_path = '/home/klp/prod/www/logs';
 	public $tmp_path = '/home/klp/prod/www/tmp';
-	public $lifetime = '180';
+	public $lifetime = '15';
 	public $session_handler = 'database';
-	public $MetaRights = '';
-	public $sitename_pagetitles = '0';
-	public $force_ssl = '0';
-	public $frontediting = '1';
-	public $feed_email = 'author';
-	public $cookie_domain = '';
-	public $cookie_path = '';
-	public $asset_id = '1';
 }

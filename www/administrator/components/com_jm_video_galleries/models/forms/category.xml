@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+              <field name="id" type="text" default="0" label="COM_JM_VIDEO_GALLERIES_FORM_LBL_CATEGORY_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" labelclass="control-label"  /> 
+       <field name="title" type="text"
+            label="COM_JM_VIDEO_GALLERIES_FORM_LBL_CATEGORY_TITLE"
+            description="COM_JM_VIDEO_GALLERIES_FORM_DESC_CATEGORY_TITLE" 
+                 required="true" 
+            filter="raw"
+            size="50"
+            maxlength="255"  labelclass="control-label"/> 
+       <field name="image" type="media"
+            label="COM_JM_VIDEO_GALLERIES_FORM_LBL_CATEGORY_IMAGE"
+            description="COM_JM_VIDEO_GALLERIES_FORM_DESC_CATEGORY_IMAGE" 
+            filter="raw"
+            directory="/images/jmvg" labelclass="control-label" /> 
+       <field name="description" type="textarea"
+            label="COM_JM_VIDEO_GALLERIES_FORM_LBL_CATEGORY_DESCRIPTION"
+            description="COM_JM_VIDEO_GALLERIES_FORM_DESC_CATEGORY_DESCRIPTION" 
+            cols="100"
+            rows="5"
+            filter="raw" labelclass="control-label" /> 
+       <field name="created_by" type="createdby" default="" 
+            label="COM_JM_VIDEO_GALLERIES_FORM_LBL_CATEGORY_CREATED_BY"
+            description="COM_JM_VIDEO_GALLERIES_FORM_DESC_CATEGORY_CREATED_BY" labelclass="control-label"  /> 
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"  labelclass="control-label"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

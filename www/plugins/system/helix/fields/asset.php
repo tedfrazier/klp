@@ -24,6 +24,7 @@
             $doc = JFactory::getDocument();
 
             $doc->addScriptDeclaration("var basepath = '{$plg_path}';");
+            $doc->addScriptDeclaration("var spjversion = '" . JVERSION . "';");
 
             if( JVERSION < 3 ){
                 $templateCss= "templates/".JFactory::getApplication()->getTemplate().'/css/template.css';    

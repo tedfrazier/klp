@@ -1,0 +1,44 @@
+.jmparallax_wrap {
+    background-size: cover;
+}
+
+.jmparallax_wrap .bx-controls.bx-has-pager{
+	position: relative;
+	text-align: center;
+}
+.jmparallax_wrap .bx-controls.bx-has-pager .bx-pager-item{
+	display: inline-block;
+    float: none;
+	-moz-box-sizing: content-box;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    margin-left: 0;
+    padding: 2px;
+    position: relative;
+    transition: all 0.5s linear 0s;
+    width: 20px;
+	margin-left: 5px;
+	margin-top: 30px;
+}
+.bx-has-pager .bx-pager-item a{
+	border-radius: 50%;
+    display: block;
+    height: 100%;
+    transition: all 0.5s linear 0s;
+    width: 100%;
+	cursor: pointer;
+	text-indent: -99999px;
+}
+.bx-has-pager .bx-pager-item a.active{
+	background-color: rgb(255, 255, 255);
+}
+
+.bx-has-pager .bx-pager-item a.active,
+.bx-has-pager .bx-pager-item a:hover,
+.bx-has-pager .bx-pager-item a:active,
+.bx-has-pager .bx-pager-item a:focus{
+    outline: none;
+}

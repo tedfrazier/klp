@@ -1,0 +1,11 @@
+/* Tiny Scrollbar */
+/*.modal-body { width: 520px; margin: 20px 0 10px; }*/
+/*.modal-body .viewport { width: 500px; height: 200px; overflow: hidden; position: relative; }*/
+.viewport{overflow: hidden;position: relative;}
+.overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0;width: 100%; }
+.scrollbar{ background: #000; position: relative; float: right; width: 5px; padding: 1px;-moz-border-radius:7px;-webkit-border-radius:7px;border-radius:7px;}
+.track { height: 100%; width:5px; position: relative;}
+.thumb { background: #ccc; height: 20px; width: 5px; cursor: pointer; overflow: hidden; position: absolute; top: 0; -moz-border-radius:7px;-webkit-border-radius:7px;border-radius:7px;}
+.thumb .end { overflow: hidden; height: 5px; width: 5px; }
+.disable { display: none; }
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }

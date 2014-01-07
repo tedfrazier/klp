@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>JM Parallax</name>
+	<author>JoomlaMan</author>
+	<creationDate>July 2013</creationDate>
+	<copyright>Copyright (c) 2013 JMSocials. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.2</version>
+	<description>
+	<![CDATA[
+	
+	]]>
+	</description>
+	<files>
+		<filename module="mod_jmparallax">mod_jmparallax.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>admin</folder>
+		<folder>language</folder>
+		<folder>assets</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_jmparallax.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_jmparallax.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_jmparallax/admin/elements">
+			<fieldset name="basic">
+				
+			<field type="media" name="background_image" class="jm-field jmmedia" label="MOD_JMPARALLAX_BGR_IMG_LBL" description="MOD_JMPARALLAX_BGR_IMG_DESC"></field>
+			<field type="textarea" filter="safehtml" name="text_content" class="jm-field" label="MOD_JMPARALLAX_TEXT_LBL" description="MOD_JMPARALLAX_TEXT_DESC"></field>
+			<field type="list" name="background_position" class="jm-field single" label="MOD_JMPARALLAX_BGR_POS_LBL" description="MOD_JMPARALLAX_BGR_POS_DESC">
+				<option value="center top">JCENTER_TOP</option> 
+				<option value="left top">JLEFT_TOP</option> 
+				<option value="left bottom">JLEFT_BOTTOM</option> 
+				<option value="center center">JCENTER_CENTER</option> 
+				<option value="right top">JRIGHT_TOP</option>
+				<option value="right bottom">JRIGHT_BOTTOM</option>
+			</field>
+			<field type="text" name="text_color" class="jm-field" label="MOD_JMPARALLAX_COLOR_LBL" description="MOD_JMPARALLAX_COLOR_DESC"></field>
+			<field type="text" name="top_padding" class="jm-field" label="MOD_JMPARALLAX_TOP_PADDING_LBL" description="MOD_JMPARALLAX_TOP_PADDING_DESC"></field>
+			<field type="text" name="bottom_padding" class="jm-field" label="MOD_JMPARALLAX_BOTTOM_PADDING_LBL" description="MOD_JMPARALLAX_BOTTOM_PADDING_DESC"></field>
+			</fieldset>
+			<fieldset name="parallax" label="Parallax options">
+			<field type="radio" name="parallax_background" class="jm-field" label="MOD_JMPARALLAX_PARALLAX_LBL" description="MOD_JMPARALLAX_PARALLAX_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field type="radio" name="repeat_background" class="jm-field" label="MOD_JMPARALLAX_REPEAT_LBL" description="MOD_JMPARALLAX_REPEAT_DESC"> 
+				<option value="repeat">JYES</option>
+				<option value="no-repeat">JNO</option> 
+			</field>
+			<field type="text" name="parallax_background_ratio" class="jm-field" default="0.5" label="MOD_JMPARALLAX_BACKGROUND_RATIO_LBL" description="MOD_JMPARALLAX_BACKGROUND_RATIO_DESC"/>
+			<field type="radio" name="autoplay" default="true" class="jm-field" label="MOD_JMPARALLAX_AUTO_PLAY_LBL" description="MOD_JMPARALLAX_AUTO_PLAY_DESC">
+				<option value="true">JYES</option>
+				<option value="false">JNO</option>
+			</field>
+			<field type="asset" name="asset" path="modules/mod_jmparallax/admin/assets/"></field>
+			</fieldset>
+			<fieldset name="carousel" label="Carousel options">
+				<field type="text" name="parallax_timeout" default="500" class="jm-field" label="MOD_JMPARALLAX_TIMEOUT_LBL" description="MOD_JMPARALLAX_TIMEOUT_DESC"></field>
+				<field type="radio" name="parallax_carousel_controls" default="1" class="jm-field" label="MOD_JMPARALLAX_CONTROLS_LBL" description="MOD_JMPARALLAX_CONTROLS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field type="list" name="parallax_carousel_controls_position" default="bottom-center" class="jm-field single" label="MOD_JMPARALLAX_CONTROLS_POSITION_LBL" description="MOD_JMPARALLAX_CONTROLS_POSITION_DESC">
+					<option value="top-left">JMTOPLEFT</option>
+					<option value="top-center">JMTOPCENTER</option>
+					<option value="top-right">JMTOPRIGHT</option>
+					<option value="bottom-left">JMBOTTOMLEFT</option>
+					<option value="bottom-center">JMBOTTOMCENTER</option>
+					<option value="bottom-right">JMBOTTOMRIGHT</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="jmparallax_layout" type="layout" default="default" class="jm-field" label="MOD_JMPARALLAX_LAYOUT_LBL" description="MOD_JMPARALLAX_LAYOUT_DECS"/>
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					class="jm-field"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+				<field name="jmparallax_include_jquery" class="jm-field single" type="list" default="2" label="MOD_JMPARALAX_INCLUDE_JQUERY_LBL" description="MOD_JMPARALLAX_INCLUDE_JQUERY_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+						<option value="2">JMAUTO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+        <server type="extension" name="JM Parallax" priority="1">http://extensions.joomlaman.com/jmparallax/update.xml</server>
+	</updateservers>
+</extension>

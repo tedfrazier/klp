@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site" method="upgrade">
+	<name>JM Page Title</name>
+	<author>Joomlaman</author>
+	<creationDate>Oct 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@joomlaman.com</authorEmail>
+	<authorUrl>www.joomlaman.net</authorUrl>
+	<version>1.0.0</version>
+	<description>This module show your page title</description>
+	<files>
+		<filename module="mod_custom">mod_jm_pagetitle.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_custom.ini</language>
+		<language tag="en-GB">en-GB.mod_custom.sys.ini</language>
+	</languages>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_CUSTOM_HTML" />
+	<config>
+		<fields name="params"  addfieldpath="/modules/mod_jm_pagetitle/admin/elements">
+			<fieldset name="basic">
+				<field type="asset" name="asset" path="modules/mod_jm_pagetitle/admin/assets/"></field>
+				<field  class="jm-field"
+					name="showsitename"
+					type="radio"
+					label="Show site name"
+					description="if YES, your site name will show after page title"
+					default="0">
+					<option
+						value="0">JNo</option>
+					<option
+						value="1">JYes</option>
+				</field>
+				<field
+					name="layout"  class="jm-field"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"  class="jm-field"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+			<fieldset
+				name="advanced">
+
+				<field
+					name="cache"  class="jm-field  single"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"  class="jm-field"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode" class="jm-field  single"
+					type="hidden"
+					default="static"> 
+					<option
+						value="static">
+					</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

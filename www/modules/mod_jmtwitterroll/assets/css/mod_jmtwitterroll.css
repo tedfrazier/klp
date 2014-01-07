@@ -1,0 +1,83 @@
+.twitterSearchesNTweet{
+    display: none;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.twitterSearchesNTweet.running{
+    display: block;
+    font-family: open_sanslight;
+    line-height: 36px
+}
+
+.twitterSearchesNTweet.running > img{
+    float: none !important;
+} 
+
+.twitterSearchesNTweet.running .twitterSearchesNUser{/* display: none; */}
+.twitterSearchesNTweet.running a{color: #fff !important}
+.twitterSearchesNContainter,.twitter_wrap{
+    position: relative;
+
+}
+
+.twitterSearchesNTweet > div{
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+.twitterSearchesNTweet > div .twitterSearchesNUser,
+.twitterSearchesNTweet > div .twitterSearchesNTime,
+.twitterSearchesNTweet > div .twitterSearchesNText{
+    display: block;
+    width: 100%;
+    color: #fff !important;
+	font-size: 16px;
+    padding-left: 0 !important;
+}
+
+
+.jm-twitter-pre span,.jm-twitter-next span{
+    color: transparent;
+}
+.jm-twitter-pre:hover,.jm-twitter-next:hover{
+    text-decoration: none !important;
+}
+.jm-twitter-btn {
+    background: rgba(32,91,131,0.4);
+    border-radius:4px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    width: 35px;
+    height: 33px;
+    line-height: 33px;
+    position: absolute;
+    top: 40%;
+}
+.jm-twitter-pre{
+    left:-40px;
+}
+.jm-twitter-next{
+    right: -40px;
+}
+.jm-twitter-btn [class*='fa-']:before,
+.jm-twitter-btn [class^='fa-']:before{
+    width: 35px;
+    height: 33px;
+    line-height: 33px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) and (min-width: 641px){
+    .twitterSearchesNTweet > div .twitterSearchesNUser,
+    .twitterSearchesNTweet > div .twitterSearchesNTime,
+    .twitterSearchesNTweet > div .twitterSearchesNText{
+        line-height: normal !important; 
+    }
+}

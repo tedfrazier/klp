@@ -1,0 +1,54 @@
+.default ul.jmsocials_items{
+  padding: 0;
+  margin: 0;
+  background-color: #ffcb32;
+  height: 32px;
+}
+.default ul.jmsocials_items li.jmsocials_item{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+  margin-right: 10px !important;
+}
+.default ul.jmsocials_items li.jmsocials_item  a span{
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+.default ul.jmsocials_items li.jmFacebook a span{
+  background: url('../images/facebook-32.png') no-repeat;
+}
+.default ul.jmsocials_items li.jmFacebook a:hover span{
+  background-position: 0 -32px;
+}
+.default ul.jmsocials_items li.jmTwitter a span{
+  background: url('../images/twitter-32.png') no-repeat;
+}
+.default ul.jmsocials_items li.jmTwitter a:hover span{
+  background-position: 0 -32px;
+}
+.default ul.jmsocials_items li.jmPinterest a span{
+  background: url('../images/pinterest-32.png') no-repeat;
+}
+.default ul.jmsocials_items li.jmPinterest a:hover span{
+  background-position: 0 -32px;
+}
+.default ul.jmsocials_items li.jmLinkedIn a span{
+  background: url('../images/linkedin-32.png') no-repeat;
+}
+.default ul.jmsocials_items li.jmLinkedIn a:hover span{
+  background-position: 0 -32px;
+}
+.default ul.jmsocials_items li.jmSkype a span{
+  background: url('../images/skype-32.png') no-repeat;
+}
+.default ul.jmsocials_items li.jmSkype a:hover span{
+  background-position: 0 -32px;
+}
+.default ul.jmsocials_items li.jmVimeo a span{
+  background: url('../images/vimeo-32.png') no-repeat;
+}
+.default ul.jmsocials_items li.jmVimeo a:hover span{
+  background-position: 0 -32px;
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JM_VIDEO_GALLERIES_VIDEOS_VIEW_DEFAULT_TITLE" option="View">
+        <message>
+            <![CDATA[COM_JM_VIDEO_GALLERIES_TITLE_LIST_VIEW_VIDEOS_DESC]]>
+        </message>
+	</layout>
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="basic" label="Basic Option">
+			<field
+				name="cat_ids"
+				type="sql"
+				multiple="true"
+				size="10"
+				default=""
+				query="SELECT id,title FROM #__jmvg_categories WHERE state=1"
+				key_field="id"
+				value_field="title"
+				label="COM_JM_VIDEO_GALLERIES_TITLE_CATEGORIES"
+				description="COM_JM_VIDEO_GALLERIES_TITLE_CATEGORIES" >
+			</field>
+			<field name="columns"
+             type="list"
+             default="3"
+             label="COM_JM_VIDEO_GALLERIES_COLS_LABEL"
+             description="COM_JM_VIDEO_GALLERIES_COLS_DESC">
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                 <option value="6">6</option>
+         </field>
+				 <field name="show_description" type="list" default="1" label="COM_JM_VIDEO_GALLERIES_SHOW_DESC_LBL">
+        <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+      </field>
+			<field name="description_length" default="0" label="COM_JM_VIDEO_GALLERIES_DESC_LENGTH_LBL" description="COM_JM_VIDEO_GALLERIES_DESC_LENGTH_DESC"/>
+		 <field name="ordering"
+             type="list"
+             default="asc"
+             label="COM_JM_VIDEO_GALLERIES_ORDERING_LABEL"
+             description="COM_JM_VIDEO_GALLERIES_ORDERING_DESC">
+                 <option value="asc">Ascending</option>
+                 <option value="desc">Descending</option>
+         </field>
+		 <field name="video_lightbox"
+				 type="radio"
+				 default="0"
+				 label="COM_JM_VIDEO_GALLERIES_VIDEO_LIGHTBOX_LABEL"
+				 description="COM_JM_VIDEO_GALLERIES_VIDEO_LIGHTBOX_DESC">
+					 <option value="0">JNO</option>
+					 <option value="1">JYES</option>
+			 </field>
+			 <field name="autoplay_video"
+				 type="radio"
+				 default="0"
+				 label="COM_JM_VIDEO_GALLERIES_AUTOPLAY_VIDEO_LABEL"
+				 description="COM_JM_VIDEO_GALLERIES_AUTOPLAY_VIDEO_DESC">
+					 <option value="1">JYES</option>
+					 <option value="0">JNO</option>
+			 </field>
+		</fieldset>
+	</fields>
+</metadata>

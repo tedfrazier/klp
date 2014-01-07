@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+              <field name="id" type="hidden" default="0" label="COM_JM_VIDEO_GALLERIES_FORM_LBL_VIDEO_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" labelclass="control-label" /> 
+       <field name="title" type="text"
+            label="COM_JM_VIDEO_GALLERIES_FORM_LBL_VIDEO_TITLE"
+            description="COM_JM_VIDEO_GALLERIES_FORM_DESC_VIDEO_TITLE" 
+                 required="true" 
+            filter="raw"
+            size="50"
+            maxlength="255" labelclass="control-label" /> 
+		<field name="alias" type="text"
+            label="COM_JM_VIDEO_GALLERIES_FORM_LBL_VIDEO_ALIAS"
+            description="COM_JM_VIDEO_GALLERIES_FORM_DESC_VIDEO_ALIAS" 
+                 required="true" 
+            filter="raw"
+            size="50"
+            maxlength="255" labelclass="control-label" />
+		<field name="date_created" 
+			type="calendar" 
+			label="COM_JM_VIDEO_GALLERIES_FORM_LBL_DATE_CREATED" 
+			description="" 
+			format="%Y-%m-%d" labelclass="control-label" />
+       <field name="video_type" type="list"
+            label="COM_JM_VIDEO_GALLERIES_FORM_LBL_VIDEO_VIDEO_TYPE"
+            description="COM_JM_VIDEO_GALLERIES_FORM_DESC_VIDEO_VIDEO_TYPE" 
+                 required="true" 
+            filter="raw" labelclass="control-label">
+                <option value="Youtube">Youtube</option>
+                <option value="Vimeo">Vimeo</option>
+                <option value="Local">Local</option>
+        </field> 
+		<field labelclass="control-label" name="filter_video_type" type="list" onchange="this.form.submit();">
+			<option value="">COM_JM_VIDEO_GALLERIES_VIDEOS_VIDEO_TYPE_FILTER</option>
+			<option value="Youtube">Youtube</option>
+			<option value="Vimeo">Vimeo</option>
+			<option value="Local">Local</option>
+		</field> 
+       <field labelclass="control-label" name="url" type="text"
+            label="COM_JM_VIDEO_GALLERIES_FORM_LBL_VIDEO_URL"
+            description="COM_JM_VIDEO_GALLERIES_FORM_DESC_VIDEO_URL" 
+                 required="true" 
+            filter="raw"
+            size="50"
+            maxlength="255" /> 
+       <field name="image" type="media"
+            label="COM_JM_VIDEO_GALLERIES_FORM_LBL_VIDEO_IMAGE"
+            description="COM_JM_VIDEO_GALLERIES_FORM_DESC_VIDEO_IMAGE" 
+                 required="true" 
+            filter="raw"
+            directory="/images/jmvg" labelclass="control-label" /> 
+       <field name="description" type="editor"  
+            label="COM_JM_VIDEO_GALLERIES_FORM_LBL_VIDEO_DESCRIPTION"
+            description="COM_JM_VIDEO_GALLERIES_FORM_DESC_VIDEO_DESCRIPTION" 
+            cols="100"
+            rows="5"
+            filter="raw" labelclass="control-label" /> 
+       <field name="created_by" type="createdby" default="" 
+            label="COM_JM_VIDEO_GALLERIES_FORM_LBL_VIDEO_CREATED_BY"
+            description="COM_JM_VIDEO_GALLERIES_FORM_DESC_VIDEO_CREATED_BY" labelclass="control-label"  /> 
+       <field name="cat_ids" type="sql" class="inputbox"        
+            label="COM_JM_VIDEO_GALLERIES_FORM_LBL_VIDEO_CAT_IDS"
+            description="COM_JM_VIDEO_GALLERIES_FORM_DESC_VIDEO_CAT_IDS"         
+			multiple="multiple"        
+			required="true" 
+			size="6" labelclass="control-label"
+			query="SELECT 0 AS `id`, '- Select Category -' AS `title` UNION SELECT `id`, `title` FROM `#__jmvg_categories`" key_field="id" value_field="title"
+         /> 
+       <field name="filter_cat_ids" type="sql" class="inputbox"  labelclass="control-label"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Select Category -' AS `title` UNION SELECT `id`, `title` FROM `#__jmvg_categories`" key_field="id" value_field="title"
+             /> 
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"  labelclass="control-label"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+		<field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

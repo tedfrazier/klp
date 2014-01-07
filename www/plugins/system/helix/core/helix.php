@@ -91,7 +91,7 @@
 
             $app      = JFactory::getApplication();
             $menu     = $app->getMenu();
-            $classes .= ' menu-' . $menu->getActive()->alias;
+            $classes .= ' menu-' . @$menu->getActive()->alias;
 
             $classes .= ' ' . self::getInstance()->Param('layout_type');
 
@@ -1126,7 +1126,8 @@
 
             self::getInstance()->Compression();
 
-            echo '<a style="font-size:0; height:0; width:0; opacity:0; position:absolute" target="_blank" href="http://www.joomlaman.com">JoomlaMan</a>';
+            self::getInstance()->addCSS('custom.css');
+
             return self::getInstance();
         }
 
@@ -1524,7 +1525,7 @@
                 if( JVERSION >= 3 ){
                     // override core joomla 3 class
                     if (!class_exists('JViewLegacy', false))  self::getInstance()->Import('core/classes/joomla30/viewlegacy.php');
-                    if (!class_exists('JModuleHelper', false)) self::getInstance()->Import('core/classes/joomla25/helper.php'); 
+                    if (!class_exists('JModuleHelper', false)) self::getInstance()->Import('core/classes/joomla30/helper.php'); 
 
                 } else {
                     // override core joomla 2.5 class

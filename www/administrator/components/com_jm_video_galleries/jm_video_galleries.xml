@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+    <name>com_jm_video_galleries</name>
+    <creationDate>2013-06-07</creationDate>
+    <copyright>Copyright (C) 2013. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Joomla Man</author>
+    <authorEmail>support@joomlaman.com</authorEmail>
+    <authorUrl>http://joomlaman.com</authorUrl>
+    <version>1.0.1</version>
+    <description>JoomlaMan Video Galleries</description>
+    <scriptfile>script.php</scriptfile>
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+<update> <!-- Runs on update -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>jm_video_galleries.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>language</folder>
+        <folder>assets</folder>
+        <folder>demo</folder>
+    </files>
+    <languages folder="site">
+			<language tag="en-GB">language/en-GB/en-GB.com_jm_video_galleries.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_jm_video_galleries/assets/images/s_com_jm_video_galleries.png" >COM_JM_VIDEO_GALLERIES</menu>
+        <submenu>
+			<menu link="option=com_jm_video_galleries&amp;view=videos" view="videos" img="components/com_jm_video_galleries/assets/images/s_videos.png" alt="Jm_video_galleries/Videos">COM_JM_VIDEO_GALLERIES_TITLE_VIDEOS</menu>
+        </submenu>
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>jm_video_galleries.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>language</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/en-GB.com_jm_video_galleries.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_jm_video_galleries.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

@@ -1,0 +1,26 @@
+.form-horizontal .controls{
+
+	/* margin-left:0px !important; */
+
+}
+.div-marker .label{
+	width: 120px;
+	display: inline-block;
+}
+.controls li{
+
+	list-style: none outside none;
+
+}
+li.item-display .edit{
+	margin-right:10px;
+}
+.jm-field{
+	/* display: block !important; */
+}
+.jmlist-single,.overlay{
+	display:none !important;
+}
+#jform_params_asset-lbl{
+	display:none;
+}

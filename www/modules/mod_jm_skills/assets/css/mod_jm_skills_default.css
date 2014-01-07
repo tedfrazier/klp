@@ -1,0 +1,39 @@
+.JMSkillsHeaderText{
+	margin-bottom: 30px;
+}
+
+.JMSkillsTitleWrap{
+	margin-bottom: 5px;
+}
+.JMSkillsTitleWrap .JMSkillsTitle{
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #000;
+}
+.JMSkillsTitleWrap .JMSkillsPercent{
+	font-weight: bold;
+}
+
+.JMSkillsProgressBarWrap{
+	margin-bottom: 10px;
+}
+.JMSkillsProgressBarWrap .JMSkillsProgressBar{
+	width: 100%;
+	display: block;
+	height: 15px;
+	background: #ededed;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.JMSkillsProgressBarWrap .JMSkillsProgressPercent{
+	display: block;
+	height: 15px;
+	background: #ddd;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+/* RTL Version */
+.rtl .left{ float: right;}
+.rtl .right{ float: left;}

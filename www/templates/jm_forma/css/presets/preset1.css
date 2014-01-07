@@ -29,10 +29,10 @@ body {
   font-size: 13px;
   font-family: 'open_sansregular';
   line-height: 1.6em;
-  color: #555555;
+  color: #555;
 }
 body.bg {
-  background: #ffffff;
+  background: #fff;
 }
 .btn,
 button,
@@ -114,8 +114,8 @@ input[type="button"].btn-white {
 button.btn-primary,
 input[type="submit"].btn-primary,
 input[type="button"].btn-primary {
-  border: 2px solid #333333;
-  color: #333333;
+  border: 2px solid #333;
+  color: #333;
   background: none;
 }
 .btn.btn-primary:hover,
@@ -166,7 +166,7 @@ h3 a:not(.btn),
 h4 a:not(.btn),
 h5 a:not(.btn),
 h6 a:not(.btn) {
-  color: #333333;
+  color: #333;
 }
 h1 a:not(.btn):hover,
 h1 a:not(.btn):focus,
@@ -198,10 +198,10 @@ h6 a:not(.btn):active {
   background: url(../../images/presets/preset1/bg-cols.png) top center repeat-y;
 }
 .SectionsBG > div {
-  background: #ffffff;
+  background: #fff;
 }
 #sp-header-wrapper {
-  background: #ffffff;
+  background: #fff;
 }
 #sp-header-wrapper.header-ontop {
   background: rgba(255,255,255,0.7);
@@ -210,7 +210,7 @@ h6 a:not(.btn):active {
   z-index: 9;
 }
 #sp-header-wrapper.fixed {
-  background: #ffffff !important;
+  background: #fff !important;
   box-shadow: 0 0 3px 0 rgba(0,0,0,0.33);
 }
 #sp-header-wrapper.header-overlay-bottom {
@@ -220,7 +220,7 @@ h6 a:not(.btn):active {
   background: url(../../images/presets/preset1/menu/dot.png) left center no-repeat;
 }
 #sp-header-wrapper #sp-menu ul.level-0 > li > a {
-  color: #777777;
+  color: #777;
 }
 #sp-header-wrapper #sp-menu ul.level-0 > li:hover > a,
 #sp-header-wrapper #sp-menu ul.level-0 > li.active > a {
@@ -250,7 +250,7 @@ h6 a:not(.btn):active {
   background: #eee;
 }
 #sp-fp-icon-wrapper .module a {
-  color: #777777;
+  color: #777;
 }
 #sp-fp-icon-wrapper .module a:hover {
   color: #91d9ee;
@@ -268,15 +268,15 @@ h6 a:not(.btn):active {
   background: #f6f6f6;
 }
 #sp-footer-wrapper {
-  background: #ffffff;
+  background: #7b828b;
 }
 .module h3.header,
 .moduletable h3.header {
-  color: #333333;
+  color: #333;
 }
 .module h3.header span.title-border,
 .moduletable h3.header span.title-border {
-  background: #333333;
+  background: #333;
 }
 .module.title-on-bottom .CustomContent.hasBG,
 .moduletable.title-on-bottom .CustomContent.hasBG {
@@ -295,7 +295,7 @@ h6 a:not(.btn):active {
 .moduletable.jm-xhtml-icontop [class^="fa-"],
 .moduletable.jm-xhtml-icontop [class*="icon-"],
 .moduletable.jm-xhtml-icontop [class*="fa-"] {
-  background: #333333;
+  background: #333;
 }
 .module.jm-xhtml-icontop [class^="icon-"]:hover:after,
 .module.jm-xhtml-icontop [class^="icon-"]:active:after,
@@ -347,7 +347,7 @@ h6 a:not(.btn):active {
 .moduletable.jm-xhtml-icontop:focus [class^="fa-"],
 .moduletable.jm-xhtml-icontop:focus [class*="icon-"],
 .moduletable.jm-xhtml-icontop:focus [class*="fa-"] {
-  background: #333333;
+  background: #333;
 }
 .module.jm-xhtml-icontop:hover [class^="icon-"]:after,
 .module.jm-xhtml-icontop:hover [class^="fa-"]:after,
@@ -416,7 +416,7 @@ h6 a:not(.btn):active {
 }
 .module .jmnewspro.consilium-news1 .read-more,
 .moduletable .jmnewspro.consilium-news1 .read-more {
-  color: #777777;
+  color: #777;
 }
 .module .jmnewspro.consilium-news1 .read-more:hover,
 .moduletable .jmnewspro.consilium-news1 .read-more:hover {
@@ -424,7 +424,7 @@ h6 a:not(.btn):active {
 }
 .module .jmnewspro.consilium-news2 .slide-inner .read-more,
 .moduletable .jmnewspro.consilium-news2 .slide-inner .read-more {
-  color: #777777;
+  color: #777;
 }
 .module .jmnewspro.consilium-news2 .slide-inner .read-more:hover,
 .moduletable .jmnewspro.consilium-news2 .slide-inner .read-more:hover {
@@ -436,15 +436,15 @@ h6 a:not(.btn):active {
 }
 .module .jmnewspro.theTeam .theTeamUsersType,
 .moduletable .jmnewspro.theTeam .theTeamUsersType {
-  color: #777777;
+  color: #777;
 }
 .module .jmnewspro.theTeam .theTeamUserAdditionalInfoWrap a:hover,
 .moduletable .jmnewspro.theTeam .theTeamUserAdditionalInfoWrap a:hover {
-  color: #333333;
+  color: #333;
 }
 .module .jmnewspro.theTeam .theTeamUserAdditionalInfoWrap a:hover:before,
 .moduletable .jmnewspro.theTeam .theTeamUserAdditionalInfoWrap a:hover:before {
-  color: #333333;
+  color: #333;
 }
 .module .jmnewspro.portfolio a.slide-item-readmore,
 .module .jmnewspro.portfolio a.slide-item-zoom,
@@ -494,11 +494,11 @@ h6 a:not(.btn):active {
 }
 .module .jmnewspro.LatestNewsBlock .item-icon,
 .moduletable .jmnewspro.LatestNewsBlock .item-icon {
-  background: #333333;
+  background: #333;
 }
 .module .jmnewspro.LatestNewsBlock .entry-title,
 .moduletable .jmnewspro.LatestNewsBlock .entry-title {
-  color: #333333;
+  color: #333;
 }
 .module .jmnewspro.LatestNewsBlock .nav-buttons span,
 .moduletable .jmnewspro.LatestNewsBlock .nav-buttons span {
@@ -580,7 +580,7 @@ h6 a:not(.btn):active {
 }
 .module .JMSkills .JMSkillsTitleWrap .JMSkillsTitle,
 .moduletable .JMSkills .JMSkillsTitleWrap .JMSkillsTitle {
-  color: #333333;
+  color: #333;
 }
 .module .JMSkills .JMSkillsProgressBarWrap .JMSkillsProgressPercent,
 .moduletable .JMSkills .JMSkillsProgressBarWrap .JMSkillsProgressPercent {
@@ -594,7 +594,7 @@ h6 a:not(.btn):active {
 }
 .module .jmtwitterroll .twitterSearchesNUser a,
 .moduletable .jmtwitterroll .twitterSearchesNUser a {
-  color: #333333;
+  color: #333;
 }
 .module .jmtwitterroll .twitterSearchesNUser a:hover,
 .moduletable .jmtwitterroll .twitterSearchesNUser a:hover {
@@ -606,7 +606,7 @@ h6 a:not(.btn):active {
 .moduletable .jmtwitterroll .JMTwitterRollNav a:hover,
 .moduletable .jmtwitterroll .JMTwitterRollNav a:focus,
 .moduletable .jmtwitterroll .JMTwitterRollNav a:active {
-  background: #333333;
+  background: #333;
   color: #ffffff;
 }
 .module .jmtwitterroll .JMTwitterRollNav a:hover i,
@@ -636,7 +636,7 @@ h6 a:not(.btn):active {
 }
 #CategoriesList #SubCategoriesList .subCategoryImage .subCategoryTitle {
   background: rgba(255,255,255,0.6);
-  color: #333333;
+  color: #333;
 }
 .page-title,
 .page-heading,
@@ -645,13 +645,13 @@ h6 a:not(.btn):active {
   border-color: #ddd;
 }
 article .entry-title {
-  color: #333333;
+  color: #333;
 }
 article .entry-title:hover {
   color: #91d9ee;
 }
 article .entry-title a {
-  color: #333333;
+  color: #333;
 }
 article .entry-title a:hover {
   color: #91d9ee;
@@ -661,10 +661,10 @@ article .entry-meta.muted {
 }
 .page-header,
 .page-heading {
-  color: #333333;
+  color: #333;
 }
 .info-title {
-  color: #333333;
+  color: #333;
   font-weight: 300;
 }
 .list-striped li:hover,
@@ -811,11 +811,11 @@ article .entry-meta.muted {
   line-height: 1;
   text-transform: uppercase;
   font-weight: bold;
-  color: #333333;
+  color: #333;
 }
 .nav#tab3 a:hover {
   background: none;
-  color: #333333;
+  color: #333;
   border-bottom-color: #91d9ee;
   outline: none;
 }
@@ -864,7 +864,7 @@ form input[type="url"],
 form input[type="search"],
 form input[type="tel"],
 form input[type="color"] {
-  color: #333333;
+  color: #333;
 }
 form input:hover,
 form input:active,
@@ -872,7 +872,7 @@ form input:focus {
   border-color: #91d9ee;
 }
 form textarea {
-  color: #333333;
+  color: #333;
 }
 form textarea:hover,
 form textarea:active,
@@ -886,10 +886,10 @@ form textarea:focus {
   border-color: #ddd;
 }
 #k2Container div.itemListCategoriesBlock .itemListSubCategories .subCategoryContainer .subCategory-inner .subCategoryImageWrap .CatTitle {
-  color: #333333;
+  color: #333;
 }
 #k2Container div.itemListCategoriesBlock .itemListSubCategories .subCategoryContainer .subCategory-inner .subCategoryImageWrap .CatTitle a {
-  color: #333333;
+  color: #333;
 }
 #k2Container div.itemListCategoriesBlock .itemListSubCategories .subCategoryContainer .subCategory-inner .subCategoryImageWrap .CatTitle a:hover,
 #k2Container div.itemListCategoriesBlock .itemListSubCategories .subCategoryContainer .subCategory-inner .subCategoryImageWrap .CatTitle a:focus,
@@ -937,7 +937,7 @@ form textarea:focus {
   background: #ddd;
 }
 #k2Container.itemView.Portfolio .itemAuthorRelated .itemAuthorRelatedBtn > span a {
-  color: #333333;
+  color: #333;
   outline: none;
 }
 #k2Container.itemView.Portfolio .itemAuthorRelated .itemAuthorRelatedBtn > span a:hover,
@@ -949,7 +949,7 @@ form textarea:focus {
   border-color: #dddddd;
 }
 .k2LatestCommentsBlock li .lcUsername {
-  color: #333333;
+  color: #333;
 }
 .k2LatestCommentsBlock li .lcItemTitle a,
 .k2LatestCommentsBlock li .lcItemCategory a {
@@ -964,12 +964,12 @@ form textarea:focus {
 #Kunena a,
 #Kunena #ktab ul.menu li:hover a,
 #Kunena #ktab ul.menu li.active a {
-  color: #333333;
+  color: #333;
 }
 #Kunena .kblock div.kheader,
 #Kunena .button,
 #Kunena .kbutton {
-  background: #333333;
+  background: #333;
 }
 #Kunena .button,
 #Kunena .kbutton {

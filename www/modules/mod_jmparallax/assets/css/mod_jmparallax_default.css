@@ -1,0 +1,8 @@
+.default.jmparallax_wrap{
+	width:100%;
+	background-color:blue;
+	background-size: cover;
+}
+.bx-viewport{
+	background: none repeat scroll 0 0 transparent !important;
+}

@@ -1,4 +1,4 @@
-a:4:{s:4:"root";s:54:"/home/klp/prod/www/templates/jm_forma/less/master.less";s:8:"compiled";s:90576:".clearfix {
+a:4:{s:4:"root";s:54:"/home/klp/prod/www/templates/jm_forma/less/master.less";s:8:"compiled";s:90513:".clearfix {
   *zoom: 1;
 }
 .clearfix:before,
@@ -377,7 +377,7 @@ dl dd {
 .contactDtailsWrap .contact-left .contact-links [class^='icon-']:hover,
 .contactDtailsWrap .contact-left .contact-links [class*='fa-']:hover,
 .contactDtailsWrap .contact-left .contact-links [class^='fa-']:hover {
-  color: #333333;
+  color: #333;
 }
 .contactDtailsWrap .contact-right > .entry-header {
   margin-bottom: 20px;
@@ -386,7 +386,7 @@ dl dd {
   margin-top: 20px;
 }
 .contactDtailsWrap .contact-right form label {
-  color: #333333;
+  color: #333;
   font-weight: 300;
 }
 .contactDtailsWrap .contact-right form .contactMessage .contactButton {
@@ -470,7 +470,7 @@ form input[type="tel"],
 form input[type="color"] {
   background: #f6f6f6;
   border: 1px solid #f0f0f0;
-  color: #333333;
+  color: #333;
   width: 100%;
   padding: 10px 0;
   margin-bottom: 15px;
@@ -532,7 +532,7 @@ form textarea {
   height: 180px;
   padding: 0;
   outline: none;
-  color: #333333;
+  color: #333;
   font-family: 'open_sanssemibold';
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -783,7 +783,7 @@ textarea {
   background-size: cover;
 }
 #sp-users-wrapper {
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #fff;
   background: #f2f2f2;
 }
 #sp-main-body-wrapper #sp-message-area {
@@ -804,9 +804,9 @@ textarea {
   margin-top: 0;
 }
 #sp-footer-wrapper {
-  background: #ffffff;
+  background: #7b828b;
   padding: 20px 0;
-  color: #333333;
+  color: #333;
 }
 #sp-footer-wrapper .row-fluid [class*="span"] {
   margin-left: 0;
@@ -818,7 +818,7 @@ textarea {
   display: inline-block;
 }
 #sp-footer-wrapper .sp-totop i {
-  color: #333333;
+  color: #333;
 }
 #sp-footer-wrapper .sp-totop small {
   display: none;
@@ -989,8 +989,8 @@ input[type="button"] {
   color: rgba(255,255,255,0.75);
 }
 .btn-primary {
-  border: 2px solid #333333;
-  color: #333333;
+  border: 2px solid #333;
+  color: #333;
   text-shadow: none;
   box-shadow: none;
   background: none;
@@ -1101,7 +1101,7 @@ input[type="submit"].btn.btn-mini {
   display: block;
   margin: 0;
   padding: 10px 20px;
-  color: #777777;
+  color: #777;
 }
 #sp-main-menu ul.level-0 > li a .menu-desc {
   font-size: 11px;
@@ -1393,7 +1393,7 @@ input[type="submit"].btn.btn-mini {
   float: right !important;
 }
 .dropline {
-  background: #777777;
+  background: #777;
 }
 .dropline a,
 .dropline span {
@@ -1555,7 +1555,7 @@ input[type="submit"].btn.btn-mini {
 .module.contact-info .label {
   float: left;
   background: none;
-  color: #333333;
+  color: #333;
   display: inline-block;
   font-size: 13px;
   line-height: normal;
@@ -1690,7 +1690,7 @@ input[type="submit"].btn.btn-mini {
 }
 .module pre {
   word-break: keep-all;
-  color: #333333 !important;
+  color: #333 !important;
 }
 .module .jm_pagetitle h2 {
   margin: 0;
@@ -1882,7 +1882,7 @@ input[type="submit"].btn.btn-mini {
 }
 .module .search form.form-inline .searchInputWrap:active,
 .module .search form.form-inline .searchInputWrap:focus {
-  border-color: #333333;
+  border-color: #333;
   -webkit-transition: all 0.3s linear 0s;
   -moz-transition: all 0.3s linear 0s;
   -o-transition: all 0.3s linear 0s;
@@ -2974,7 +2974,7 @@ ul.unstyled [class^="fa-"]:before {
 }
 #k2Container.itemView .itemIntroText {
   font-weight: normal;
-  color: #555555;
+  color: #555;
 }
 #k2Container.itemView .itemFooter {
   border-top: 1px solid;
@@ -3203,7 +3203,7 @@ ul.unstyled [class^="fa-"]:before {
 #k2Container.itemView .itemComments .itemCommentsForm [class*=" icon-"],
 #k2Container.itemView .itemComments .itemCommentsForm [class^="fa-"],
 #k2Container.itemView .itemComments .itemCommentsForm [class*=" fa-"] {
-  color: #333333;
+  color: #333;
   padding: 5px 0;
   border: ;
   border-right-width: 0;
@@ -3244,7 +3244,7 @@ ul.unstyled [class^="fa-"]:before {
   padding-top: 0;
   font-weight: normal;
   font-size: inherit;
-  color: #555555;
+  color: #555;
 }
 #k2Container.itemView.Portfolio .itemContentBlock h3.entry-title {
   margin: 0 0 15px 0;
@@ -3361,7 +3361,7 @@ ul.unstyled [class^="fa-"]:before {
   font-size: 18px;
 }
 #k2Container.itemView.Portfolio .itemVideoBlock .itemVideoCaption {
-  color: #555555;
+  color: #555;
   font-weight: normal;
   float: none;
   width: 100%;
@@ -3371,7 +3371,7 @@ ul.unstyled [class^="fa-"]:before {
   float: none;
   width: 100%;
   padding: 10px 0 0 0;
-  color: #555555;
+  color: #555;
   font-size: 13px;
   font-weight: normal;
   text-align: inherit;
@@ -3398,10 +3398,10 @@ ul.unstyled [class^="fa-"]:before {
   margin-bottom: 15px;
 }
 #k2Container.itemView .itemBackToTop {
-  color: #333333;
+  color: #333;
 }
 #k2Container.itemView .itemBackToTop a {
-  color: #333333;
+  color: #333;
 }
 #k2Container.userView .itemAuthorBlock {
   background: none;
@@ -3682,4 +3682,4 @@ ul.unstyled [class^="fa-"]:before {
     clear: both;
   }
 }
-";s:5:"files";a:12:{s:54:"/home/klp/prod/www/templates/jm_forma/less/master.less";i:1388862836;s:57:"/home/klp/prod/www/templates/jm_forma/less/variables.less";i:1388862836;s:54:"/home/klp/prod/www/templates/jm_forma/less/mixins.less";i:1388862836;s:53:"/home/klp/prod/www/templates/jm_forma/less/fonts.less";i:1388862836;s:54:"/home/klp/prod/www/templates/jm_forma/less/joomla.less";i:1388862836;s:53:"/home/klp/prod/www/templates/jm_forma/less/theme.less";i:1388862836;s:55:"/home/klp/prod/www/templates/jm_forma/less/buttons.less";i:1388862836;s:52:"/home/klp/prod/www/templates/jm_forma/less/menu.less";i:1388862836;s:54:"/home/klp/prod/www/templates/jm_forma/less/module.less";i:1388862836;s:58:"/home/klp/prod/www/templates/jm_forma/less/typography.less";i:1388862836;s:58:"/home/klp/prod/www/templates/jm_forma/less/responsive.less";i:1388862836;s:50:"/home/klp/prod/www/templates/jm_forma/less/k2.less";i:1388862836;}s:7:"updated";i:1388863695;}
+";s:5:"files";a:12:{s:54:"/home/klp/prod/www/templates/jm_forma/less/master.less";i:1383896198;s:57:"/home/klp/prod/www/templates/jm_forma/less/variables.less";i:1385697586;s:54:"/home/klp/prod/www/templates/jm_forma/less/mixins.less";i:1383896198;s:53:"/home/klp/prod/www/templates/jm_forma/less/fonts.less";i:1384413416;s:54:"/home/klp/prod/www/templates/jm_forma/less/joomla.less";i:1385990598;s:53:"/home/klp/prod/www/templates/jm_forma/less/theme.less";i:1386236050;s:55:"/home/klp/prod/www/templates/jm_forma/less/buttons.less";i:1385991752;s:52:"/home/klp/prod/www/templates/jm_forma/less/menu.less";i:1386055102;s:54:"/home/klp/prod/www/templates/jm_forma/less/module.less";i:1386205664;s:58:"/home/klp/prod/www/templates/jm_forma/less/typography.less";i:1384413830;s:58:"/home/klp/prod/www/templates/jm_forma/less/responsive.less";i:1385998252;s:50:"/home/klp/prod/www/templates/jm_forma/less/k2.less";i:1385285280;}s:7:"updated";i:1389123142;}

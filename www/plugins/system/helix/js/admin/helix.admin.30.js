@@ -98,7 +98,9 @@ jQuery(function($){
 
         $('.tab-pane .row-fluid').find('.control-group').unwrap();
         $('#attrib-basic').find('#jform_client_id').unwrap();
-        $('.tab-pane').find('.control-group').unwrap();
+        if(spjversion=='3.2.0'){
+            $('.tab-pane').find('.control-group').unwrap();
+        }
         $('.info-labels').unwrap();
 
         $('.group_separator.in_group').each(function(){
